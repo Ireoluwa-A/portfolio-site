@@ -1,0 +1,10 @@
+.gallery{
+    margin-top: 10%;
+    border-width: 5px;
+    border-color: #A3A86D;
+    width: 70%;
+    height: 80%;
+}
+.gallery-title{
+    margin-top: -50px;
+}
