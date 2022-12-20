@@ -32,7 +32,7 @@ const Navbar = () => {
                 <ul className='hidden md:flex pr-[100px] text-[14px]'> 
                     <li>
                         <Link href='/' to='projects' smooth={true} duration={500}>
-                            PROJECTS
+                            PROJECT
                             {/* Projects */}
                         </Link>
                     </li>
