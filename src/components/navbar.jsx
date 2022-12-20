@@ -3,7 +3,10 @@ import {FaBars, FaTimes, FaGitHub, FaLinkedin, FaRegistered} from 'react-icons/f
 import {HiOutlineMail} from 'react-icons/hi'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 
+import { NavLink} from "react-router-dom";
+
 import "../styles/navbar.css";
+import {resume} from "../assets/resume.pdf";
 
 import {Link} from 'react-scroll' 
 
@@ -15,7 +18,6 @@ const Navbar = () => {
     // const [navColor, setNavColor] = useState(['red'])
 
     return (
-
         <div className='fixed w-full h-[80px] flex justify-between items-center px-3 bg-[#ece8e3]
         text-black-300 tracking-[1px] z-10'>
              {/* Logo */}
@@ -29,17 +31,20 @@ const Navbar = () => {
             <div className='nav'>
                 <ul className='hidden md:flex pr-[100px] text-[14px]'> 
                     <li>
-                        <Link to='projects' smooth={true} duration={500}>
+                        <Link href='/' to='projects' smooth={true} duration={500}>
                             PROJECTS
                             {/* Projects */}
                         </Link>
                     </li>
 
                     <li>
-                        <a href='/photography'>
+                        <NavLink to='/photography' activeClassName="active-link">
                             PHOTOGRAPHY
                             {/* Photography */}
-                            </a>
+                        </NavLink> 
+                        {/* <a href='/photography' >
+                            PHOTOGRAPHY
+                        </a> */}
                     </li>
 
                     <li>
@@ -50,27 +55,55 @@ const Navbar = () => {
                     </li>
 
                     <li>
-                        <a href="/" target="_blank">
+                        <a className='font-bold text-[#A3A86D]' href="/" target="_blank">
                             RESUME
                             {/* Resume */}
                         </a>
                     </li>
+
                 </ul>
 
             </div>
 
             {/* Hamburger Menu */}
-            <div onClick={handleClick} className='md:hidden z-10'>
+            <div onClick={handleClick} className='md:hidden pr-[5%] z-20'>
                 {!nav ? <FaBars /> : <FaTimes />}
             </div>
 
             {/* Mobile menu  */}
-            <ul className={!nav ? 'hidden' : 'absolute top-0 z-10 left-0 w-full h-screen bg-[#F7ECDE] flex flex-col justify-center items-center'} >
-                <li className='py-6 text-xl'>Home</li>
-                <li className='py-6 text-xl'>About</li>
-                <li className='py-6 text-xl'>Projects</li>
-                <li className='py-6 text-xl'>Photography</li>
-                <li className='py-6 text-xl'>Contact</li>
+            <ul className={!nav ? 'hidden' : 'nav absolute top-0 z-1 left-0 w-full h-screen bg-[#ece8e3] flex flex-col justify-center items-center'} >
+                <li>
+                    <a href="/">
+                        HOME
+                        {/* Resume */}
+                    </a>
+                </li>
+                <li>
+                    <Link to='projects' smooth={true} duration={500}>
+                        PROJECTS
+                        {/* Projects */}
+                    </Link>
+                </li>
+                <li>
+                    <a href='/photography'>
+                        PHOTOGRAPHY
+                        {/* Photography */}
+                    </a>
+                </li>
+
+                <li>
+                    <Link to='about' smooth={true} duration={500}>
+                        ABOUT
+                        {/* About */}
+                    </Link>
+                </li>
+
+                <li>
+                    <a href="../assets/resume.pdf" target="_blank">
+                        RESUME
+                        {/* Resume */}
+                    </a>
+                </li>
             </ul>
 
             {/* <div className='flex fixed flex-col top-[35%] left-0'>
