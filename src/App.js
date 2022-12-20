@@ -8,12 +8,13 @@ import Home from './components/home';
 import Projects from './components/projects'
 import Photography from './components/photography'
 
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, BrowserRouter} from 'react-router-dom'
 
 function App() {
   return (
     <div>
       <Navbar/>
+      <BrowserRouter basename="/portfolio-site">
       <Routes>  
         <Route path="/" element={
           <div>
@@ -21,7 +22,9 @@ function App() {
             <Projects/>
           </div>}/>
         <Route path='/photography' element={<Photography/>}/>
-      </Routes>
+      </Routes>  
+      </BrowserRouter>
+
       
     </div>
   );
