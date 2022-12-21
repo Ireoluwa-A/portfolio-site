@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/portfolio-site/static/css/main.9397d085.css",
-    "main.js": "/portfolio-site/static/js/main.1668fba6.js",
-    "static/media/2.jpg": "/portfolio-site/static/media/2.3bff9e4ba111c12e2f47.jpg",
-    "static/media/6.jpg": "/portfolio-site/static/media/6.8af887bfa2060c486750.jpg",
-    "static/media/9.jpg": "/portfolio-site/static/media/9.3475839992ab33bbd53e.jpg",
-    "static/media/4.jpg": "/portfolio-site/static/media/4.d407fb7945eb3e6124bf.jpg",
-    "static/media/1.jpg": "/portfolio-site/static/media/1.4214ed1d1c608c0b8698.jpg",
-    "static/media/7.jpg": "/portfolio-site/static/media/7.ad989bd6c267de00a832.jpg",
-    "static/media/8.jpg": "/portfolio-site/static/media/8.8f5cdea49190c4cbbe1c.jpg",
-    "static/media/5.jpg": "/portfolio-site/static/media/5.6a73047da6e363dcf41e.jpg",
-    "static/media/3.jpg": "/portfolio-site/static/media/3.dff157c9e374ee47c686.jpg",
-    "static/media/Ire_outline.png": "/portfolio-site/static/media/Ire_outline.714be6a40730b8db4290.png",
-    "static/media/resume.pdf": "/portfolio-site/static/media/resume.fab07117d143a0d58edd.pdf",
-    "index.html": "/portfolio-site/index.html",
-    "main.9397d085.css.map": "/portfolio-site/static/css/main.9397d085.css.map",
-    "main.1668fba6.js.map": "/portfolio-site/static/js/main.1668fba6.js.map"
+    "main.css": "/static/css/main.9397d085.css",
+    "main.js": "/static/js/main.d0e61874.js",
+    "static/media/2.jpg": "/static/media/2.3bff9e4ba111c12e2f47.jpg",
+    "static/media/6.jpg": "/static/media/6.8af887bfa2060c486750.jpg",
+    "static/media/9.jpg": "/static/media/9.3475839992ab33bbd53e.jpg",
+    "static/media/4.jpg": "/static/media/4.d407fb7945eb3e6124bf.jpg",
+    "static/media/1.jpg": "/static/media/1.4214ed1d1c608c0b8698.jpg",
+    "static/media/7.jpg": "/static/media/7.ad989bd6c267de00a832.jpg",
+    "static/media/8.jpg": "/static/media/8.8f5cdea49190c4cbbe1c.jpg",
+    "static/media/5.jpg": "/static/media/5.6a73047da6e363dcf41e.jpg",
+    "static/media/3.jpg": "/static/media/3.dff157c9e374ee47c686.jpg",
+    "static/media/Ire_outline.png": "/static/media/Ire_outline.714be6a40730b8db4290.png",
+    "static/media/resume.pdf": "/static/media/resume.fab07117d143a0d58edd.pdf",
+    "index.html": "/index.html",
+    "main.9397d085.css.map": "/static/css/main.9397d085.css.map",
+    "main.d0e61874.js.map": "/static/js/main.d0e61874.js.map"
   },
   "entrypoints": [
     "static/css/main.9397d085.css",
-    "static/js/main.1668fba6.js"
+    "static/js/main.d0e61874.js"
   ]
 }
