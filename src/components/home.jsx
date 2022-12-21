@@ -15,7 +15,7 @@ const Home = () => {
                 <img className='w-[70%] h-auto m-auto' src={Ire_outline_w}></img>
                 </div>
 
-                <div className = 'drop-shadow-md absolute left-[50%] top-[70%] w-1/4 h-[60px] first-letter:mt-10 bg-white animate-fade_in_right'>
+                <div className = 'drop-shadow-md absolute left-[50%] top-[65%] w-1/4 h-[60px] first-letter:mt-10 bg-white animate-fade_in_right'>
                     <p className='font-sans font-bold -translate-y-[12px] pl-[10px] tracking-wider md:text-xl'>
                         SOFTWARE ENGINEER 
                         <span className='absolute left-[67%] top-[20%] text-[10px]'><FaRegistered /></span> 
