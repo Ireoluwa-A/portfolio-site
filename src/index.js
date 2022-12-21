@@ -8,11 +8,13 @@ import {BrowserRouter} from 'react-router-dom'
 import { useLayoutEffect, useRef, useState } from "react";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+import {HashRouter as Router } from 'react-router-dom';
+
 
 root.render(
-  <BrowserRouter>
+  <Router>
   <App />
-  </BrowserRouter>
+  </Router>
 );
 
 // If you want to start measuring performance in your app, pass a function
