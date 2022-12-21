@@ -8,23 +8,20 @@ import Home from './components/home';
 import Projects from './components/projects'
 import Photography from './components/photography'
 
-import {Routes, Route, BrowserRouter} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
     <div>
       <Navbar/>
-      <BrowserRouter basename="/portfolio-site">
       <Routes>  
-        <Route path="/portfolio-site" element={
+        <Route path="/" element={
           <div>
             <Home/>
             <Projects/>
           </div>}/>
         <Route path='/photography' element={<Photography/>}/>
-      </Routes>  
-      </BrowserRouter>
-
+      </Routes>
       
     </div>
   );
