@@ -6,14 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom'
 
 import { useLayoutEffect, useRef, useState } from "react";
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
 import {HashRouter as Router } from 'react-router-dom';
 
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <Router>
-  <App />
+    <App />
   </Router>
 );
 

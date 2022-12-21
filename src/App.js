@@ -15,7 +15,7 @@ function App() {
     <div>
       <Navbar/>
       <Routes>  
-        <Route path="/" element={
+        <Route path="/#" element={
           <div>
             <Home/>
             <Projects/>
