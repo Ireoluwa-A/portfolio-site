@@ -22,7 +22,7 @@ const Navbar = () => {
         text-black-300 tracking-[1px] z-10'>
              {/* Logo */}
             <div className='pl-[20%]'>
-                <a className='font-bold font-sans text-xl cursor-pointer' href='/'>
+                <a className='font-bold font-sans text-xl cursor-pointer' href='/portfolio-site'>
                     I A
                 </a>
             </div>
