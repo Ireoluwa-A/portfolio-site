@@ -11,8 +11,8 @@ const Home = () => {
             {/* container */}
             <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full '>
  
-                <div className = 'drop-shadow-lg absolute left-[50%] top-[25%] w-1/4 h-[45%] first-letter:mt-10 bg-[#7C9AB9] animate-fade_in_right border-white border-[12px]'>
-                <img className='w-[290px] h-auto m-auto' src={Ire_outline_w}></img>
+                <div className = 'drop-shadow-lg absolute left-[50%] top-[25%] w-1/4 h-[40%] first-letter:mt-10 bg-[#7C9AB9] animate-fade_in_right border-white border-[12px]'>
+                <img className='w-[70%] h-auto m-auto' src={Ire_outline_w}></img>
                 </div>
 
                 <div className = 'drop-shadow-md absolute left-[50%] top-[70%] w-1/4 h-[60px] first-letter:mt-10 bg-white animate-fade_in_right'>
