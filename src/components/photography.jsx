@@ -17,18 +17,18 @@ const Photography = () => {
     // let color = A3A86D;
 
     let data1 = [
-        {id: 1, imgSrc: Img1},
+        {id: 1, imgSrc: Img1, name: 'Constantine Westerink', date: 'April 2021'},
         {id: 2, imgSrc: Img2},
         {id: 7, imgSrc: Img7}
     ]
     let data2 = [
-        {id: 3, imgSrc: Img3},
-        {id: 4, imgSrc: Img4}
+        {id: 3, imgSrc: Img3, name: 'Tyrece Jeffrey', date: 'October 2022'},
+        {id: 4, imgSrc: Img4, name: 'Josephine Kim', date: 'February 2021'}
     ]
     let data3 = [
-        {id: 5, imgSrc: Img5},
-        {id: 6, imgSrc: Img6},
-        {id: 9, imgSrc: Img9}
+        {id: 5, imgSrc: Img5, name: 'Ire Ayoola', date: 'June 2019'},
+        {id: 6, imgSrc: Img6, name: 'Kandace Pewee', date: 'July 2021'},
+        {id: 9, imgSrc: Img9, name: 'Christelle Akanashenge', date: 'July 2021'}
     ]
 
 
@@ -46,27 +46,43 @@ const Photography = () => {
                             <div class="dream w-full md:w-[32.5%]">
                                 {data1.map((item,index)=>{
                                 return(
-                                    <img key={index} src={item.imgSrc}/>   
+                                    <div class='gallery-box'>
+                                        <img key={index} src={item.imgSrc}/> 
+                                        <div className='gallery-description'>
+                                            <h2>{item.name}</h2>
+                                            <h3>{item.date}</h3>
+                                        </div>
+                                    </div>
                                 )
                                 })}
                             </div>
                             <div class="dream w-full md:w-[32.5%]">
                                 {data2.map((item,index)=>{
                                 return(
-                                    <img key={index} src={item.imgSrc}/>   
+                                    <div class='gallery-box'>
+                                        <img key={index} src={item.imgSrc}/> 
+                                        <div className='gallery-description'>
+                                            <h2>{item.name}</h2>
+                                            <h3>{item.date}</h3>
+                                        </div>
+                                    </div>
                                 )
                                 })}
                             </div>
                             <div class="dream w-full md:w-[32.5%]">
                                 {data3.map((item,index)=>{
                                 return(
-                                    <img key={index} src={item.imgSrc}/>   
+                                    <div class='gallery-box'>
+                                        <img key={index} src={item.imgSrc}/> 
+                                        <div className='gallery-description'>
+                                            <h2>{item.name}</h2>
+                                            <h3>{item.date}</h3>
+                                        </div>
+                                    </div>  
                                 )
                                 })}
                             </div>
-
                          </div>
-                   
                 </div> 
             </div>
 

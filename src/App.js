@@ -1,5 +1,5 @@
 // import logo from './images/logo.svg';
-import './App.css';
+import './styles/App.css';
 
 import {useRef, useEffect} from 'react';
 
@@ -12,18 +12,16 @@ import {Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <main>
       <Navbar/>
+      
       <Routes>  
-        <Route exact path="/" element={
-          <div>
-            <Home/>
-            <Projects/>
-          </div>}/>
+        <Route exact path="/" element={<Home/>}/>
         <Route path='/photography' element={<Photography/>}/>
       </Routes>
       
-    </div>
+    </main>
+
   );
 }
 

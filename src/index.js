@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import {BrowserRouter as Router} from 'react-router-dom'
 
+import './styles/index.css';
+import App from './App';
+
+// import {BrowserRouter as Router} from 'react-router-dom'
 import { useLayoutEffect, useRef, useState } from "react";
 import {HashRouter as Router} from 'react-router-dom';
 
@@ -21,7 +22,6 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
-
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 

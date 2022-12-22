@@ -7,7 +7,12 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    fontFamily:{
+      'WorkSans': ['"Work Sans"', 'sans-serif']
+    },
+
+    extend: {
+    },
 
     animation:{
       spin: 'spin 6s linear infinite',

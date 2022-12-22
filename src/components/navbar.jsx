@@ -6,7 +6,7 @@ import {BsFillPersonLinesFill} from 'react-icons/bs'
 import { NavLink} from "react-router-dom";
 
 import "../styles/navbar.css";
-import {resume} from "../assets/resume.pdf";
+import resume from "../assets/resume.pdf";
 
 import {Link} from 'react-scroll' 
 
@@ -55,7 +55,7 @@ const Navbar = () => {
                     </li>
 
                     <li>
-                        <a className='font-bold text-[#A3A86D]' href="/" target="_blank">
+                        <a className='font-bold text-[#A3A86D]' href={resume} target="_blank">
                             RESUME
                             {/* Resume */}
                         </a>

@@ -1,7 +1,17 @@
+
+
+.divider{
+    border-radius: 25px;
+    background-color: #cba05f;
+    padding: 2px;
+    margin: auto;
+    width: 80%;
+    height: 2px;
+
+}
 .name-mobile{
 
 }
-
 
 .name-main{
     
