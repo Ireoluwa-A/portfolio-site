@@ -13,8 +13,9 @@ const Projects = () => {
                 <div className='divider'></div>
             </div>
             {/* <div className='flex justify-center h-full'>
-                
             </div> */}
+
+            
         </div>
     )
 
