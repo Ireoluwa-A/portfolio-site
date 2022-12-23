@@ -9,6 +9,29 @@
     height: 2px;
 
 }
+.hover-animation{
+    cursor: pointer;
+    /* background: url('../assets/Ire_outline_w.png') repeat 0 0;
+    /* background-attachment: fixed; */
+    /* position: relative;
+    cursor: pointer;
+    width: 1000px;
+    height: 100px;
+    z-index: 4;  */
+}
+
+.hover-animation img:last-child{
+    display: none;
+}
+.hover-animation:hover img:last-child {
+    display: block;
+}
+.hover-animation:hover img:first-child{
+    display: none;
+}
+
+
+
 .name-mobile{
 
 }

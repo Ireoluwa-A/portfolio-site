@@ -1,3 +1,32 @@
+.nav-container{
+    position:fixed;
+    width: 100%;
+    /* height: var(--nav-height); */
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    background-color: #ece8e3;
+    letter-spacing: 1px;
+    z-index: 4;
+    /* transition-timing-function: ease-in; */
+    transition: 0.3s;
+}
+.nav-container-hidden{
+    transform: translateY(-80px);
+}
+.logo{
+    padding-left: 10%;
+}
+.logo a{
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
 .nav a{
     position: relative
 }

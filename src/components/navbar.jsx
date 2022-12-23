@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {FaBars, FaTimes, FaGitHub, FaLinkedin, FaRegistered} from 'react-icons/fa';
 import {HiOutlineMail} from 'react-icons/hi'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 
-import { NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 import "../styles/navbar.css";
 import resume from "../assets/resume.pdf";
@@ -15,16 +15,24 @@ const Navbar = () => {
     const [nav,setNav] = useState(false)
     const handleClick = () => setNav(!nav)
 
+    const [show, setShow] = useState(true)
+    const controlNavbar = () => {
+        setShow(window.scrollY > 500)
+    }
+    useEffect(() => {
+        window.addEventListener('scroll',
+        controlNavbar)
+        return () => {
+            window.removeEventListener('scroll',
+            controlNavbar)
+        }
+    },[])
     // const [navColor, setNavColor] = useState(['red'])
 
     return (
-        <div className='fixed w-full h-[80px] flex justify-between items-center px-3 bg-[#ece8e3]
-        text-black-300 tracking-[1px] z-10'>
-             {/* Logo */}
-            <div className='pl-[20%]'>
-                <a className='font-bold font-sans text-xl cursor-pointer' href='/'>
-                    I A
-                </a>
+        <div className={`nav-container ${show && 'nav-container-hidden'}`}>
+            <div className='logo'>
+                <a href='/'> I A </a>
             </div>
 
             {/* NAV Items */}
@@ -42,9 +50,6 @@ const Navbar = () => {
                             PHOTOGRAPHY
                             {/* Photography */}
                         </NavLink> 
-                        {/* <a href='/photography' >
-                            PHOTOGRAPHY
-                        </a> */}
                     </li>
 
                     <li>
@@ -60,17 +65,17 @@ const Navbar = () => {
                             {/* Resume */}
                         </a>
                     </li>
-
                 </ul>
-
             </div>
 
-            {/* Hamburger Menu */}
+
+            {/* Mobile menu  */}
+
+            {/* Hamburger*/}
             <div onClick={handleClick} className='md:hidden pr-[5%] z-20'>
                 {!nav ? <FaBars /> : <FaTimes />}
             </div>
 
-            {/* Mobile menu  */}
             <ul className={!nav ? 'hidden' : 'nav absolute top-0 z-1 left-0 w-full h-screen bg-[#ece8e3] flex flex-col justify-center items-center'} >
                 <li>
                     <a href="/">
@@ -99,7 +104,7 @@ const Navbar = () => {
                 </li>
 
                 <li>
-                    <a href="../assets/resume.pdf" target="_blank">
+                    <a href={resume} target="_blank">
                         RESUME
                         {/* Resume */}
                     </a>

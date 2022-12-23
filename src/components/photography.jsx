@@ -1,4 +1,10 @@
 import React from 'react'
+
+
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+
 import "../styles/photography.css";
 
 import Img1 from '../assets/gallery/1.jpg';
@@ -10,25 +16,33 @@ import Img6 from '../assets/gallery/6.jpg';
 import Img7 from '../assets/gallery/7.jpg';
 import Img8 from '../assets/gallery/8.jpg';
 import Img9 from '../assets/gallery/9.jpg';
+import Img10 from '../assets/gallery/10.jpg';
+import Img11 from '../assets/gallery/11.jpg';
+import Img12 from '../assets/gallery/12.jpg';
+import Img13 from '../assets/gallery/13.jpg';
+
 
 
 const Photography = () => {
 
     // let color = A3A86D;
-
     let data1 = [
         {id: 1, imgSrc: Img1, name: 'Constantine Westerink', date: 'April 2021'},
         {id: 2, imgSrc: Img2},
-        {id: 7, imgSrc: Img7}
+        {id: 7, imgSrc: Img7},
+        {id: 10, imgSrc: Img10}
     ]
     let data2 = [
         {id: 3, imgSrc: Img3, name: 'Tyrece Jeffrey', date: 'October 2022'},
-        {id: 4, imgSrc: Img4, name: 'Josephine Kim', date: 'February 2021'}
+        {id: 4, imgSrc: Img4, name: 'Josephine Kim', date: 'February 2021'},
+        {id: 11, imgSrc: Img11},
+        {id: 13, imgSrc: Img13, name:'Peach Tree Rascals', date: 'October 2022'}
     ]
     let data3 = [
         {id: 5, imgSrc: Img5, name: 'Ire Ayoola', date: 'June 2019'},
         {id: 6, imgSrc: Img6, name: 'Kandace Pewee', date: 'July 2021'},
-        {id: 9, imgSrc: Img9, name: 'Christelle Akanashenge', date: 'July 2021'}
+        {id: 9, imgSrc: Img9, name: 'Christelle Akanashenge', date: 'July 2021'},
+        {id: 12, imgSrc: Img12, name: 'CMU', date: 'October 2022'}
     ]
 
 
@@ -39,15 +53,13 @@ const Photography = () => {
                 <p className='gallery-title flex text-[30px] font-bold animate-fade_in_left'>
                     FEATURED
                 </p>
-                {/* <div className='h-full flex gallery-border animate-fade_in_right'>
-                </div> */}
                     <div className='w-full h-full gallery-content animate-fade_in_right'>
                         <div className="flex flex-col md:flex-row justify-between animate-fade_in_right">
                             <div class="dream w-full md:w-[32.5%]">
                                 {data1.map((item,index)=>{
                                 return(
                                     <div class='gallery-box'>
-                                        <img key={index} src={item.imgSrc}/> 
+                                        <LazyLoadImage effect="blur" key={index} src={item.imgSrc}/> 
                                         <div className='gallery-description'>
                                             <h2>{item.name}</h2>
                                             <h3>{item.date}</h3>
@@ -60,7 +72,7 @@ const Photography = () => {
                                 {data2.map((item,index)=>{
                                 return(
                                     <div class='gallery-box'>
-                                        <img key={index} src={item.imgSrc}/> 
+                                        <LazyLoadImage effect="blur" key={index} src={item.imgSrc}/> 
                                         <div className='gallery-description'>
                                             <h2>{item.name}</h2>
                                             <h3>{item.date}</h3>
@@ -73,7 +85,7 @@ const Photography = () => {
                                 {data3.map((item,index)=>{
                                 return(
                                     <div class='gallery-box'>
-                                        <img key={index} src={item.imgSrc}/> 
+                                        <LazyLoadImage effect="blur" key={index} src={item.imgSrc}/> 
                                         <div className='gallery-description'>
                                             <h2>{item.name}</h2>
                                             <h3>{item.date}</h3>

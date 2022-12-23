@@ -4,6 +4,7 @@ import Projects from './projects';
 
 import Ire_outline_w from '../assets/Ire_outline_w.png';
 import Ire_outline_b from '../assets/Ire_outline_b.png';
+import Ire_gif_w from '../assets/camera_capture_final.gif';
 
 import "../styles/home.css";
 
@@ -20,23 +21,25 @@ const Home = () => {
             <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full '>
 
                 <div className = 'drop-shadow-lg absolute left-[50%] top-[25%] w-1/4 h-[40%] first-letter:mt-10 bg-[#7C9AB9] animate-fade_in_right border-white border-[12px]'>
-                    <img className='w-[75%] h-[110%] mt-[10px] m-auto' src={Ire_outline_w}></img>
+                    <a className='hover-animation'>
+                        <img className='w-[54%] h-[80%] m-auto mt-[10%]' src={Ire_outline_w}></img>
+                        <img className='scale-x-150 scale-y-110 w-[1000px] h-[300px] mt-[4%] m-auto' src={Ire_gif_w}></img>
+                    </a>
                 </div>
 
                 <div className = 'drop-shadow-md absolute left-[50%] top-[65%] w-1/4 h-[60px] first-letter:mt-10 bg-white animate-fade_in_right'>
-                    <p className='font-sans font-bold -translate-y-[10px] pl-[10px] tracking-wider md:text-xl'>
-                    <Typical
-                        steps={[2000,'SOFTWARE ENGINEER',5000,'PHOTOGRAPHER', 5000, 'POLYGLOT',5000]}
+
+                    <Typical className='font-sans font-bold -translate-y-[10px] pl-[10px] tracking-wider md:text-xl'
+                        steps={[2000,'SOFTWARE ENGINEER',5000,'PHOTOGRAPHER',5000,'POLYGLOT',5000]}
                         loop={Infinity}
-                        wrapper="p"
+                        wrapper='p'
                     />
 
-                        {/* <span className='absolute top-[20%] text-[10px]'><FaRegistered /></span>  */}
-                    </p>
+
 
                     <p className='font-sans max-w-[1/4] -translate-y-[12px] text-xs pl-[10px] 
                                 tracking-wider'>
-                        Carnegie Mellon Student, passionate about tech, language, photography, and plantains
+                        Carnegie Mellon student, passionate about tech, language, photography, and plantains
                     </p>
                 </div>
 

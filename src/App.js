@@ -14,14 +14,11 @@ function App() {
   return (
     <main>
       <Navbar/>
-      
       <Routes>  
         <Route exact path="/" element={<Home/>}/>
         <Route path='/photography' element={<Photography/>}/>
       </Routes>
-      
     </main>
-
   );
 }
 
