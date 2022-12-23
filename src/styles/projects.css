@@ -2,4 +2,27 @@
 .projects-container{
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-header{
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+.projects-header h1{
+    z-index: 1;
+    font-size: 35px;
+}
+.divider{
+    position: relative;
+    width: 90%;
+    height: 25px;
+    background-color: #7C9AB9;
+    opacity: 0.9;
+    margin-left: 5%;
+    margin-top: -4%;
+    z-index: -1;
+    filter: grayscale(20%);
 }

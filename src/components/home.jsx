@@ -1,4 +1,6 @@
 import React from 'react'
+import {Link} from 'react-scroll' 
+
 
 import Projects from './projects';
 
@@ -18,7 +20,7 @@ const Home = () => {
     return (
         <div name='home' className='w-full h-screen'>
 
-            <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full '>
+            <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
 
                 <div className = 'drop-shadow-lg absolute left-[50%] top-[25%] w-1/4 h-[40%] first-letter:mt-10 bg-[#7C9AB9] animate-fade_in_right border-white border-[12px]'>
                     <a className='hover-animation'>
@@ -28,6 +30,8 @@ const Home = () => {
                 </div>
 
                 <div className = 'drop-shadow-md absolute left-[50%] top-[65%] w-1/4 h-[60px] first-letter:mt-10 bg-white animate-fade_in_right'>
+
+                    {/* Typical auto type module: */}
 
                     <Typical className='font-sans font-bold -translate-y-[10px] pl-[10px] tracking-wider md:text-xl'
                         steps={[2000,'SOFTWARE ENGINEER',5000,'PHOTOGRAPHER',5000,'POLYGLOT',5000]}
@@ -53,7 +57,16 @@ const Home = () => {
                 <h1 className='font-WorkSans absolute left-[27.5%] top-[47%] text-8xl tracking-wider sm:txt-7xl font-bold text-[] animate-fade_in_left'>
                     ALARAPE
                 </h1>
-  
+
+                <div className='scroll-down-container'>
+                    <Link href='/' className ='scroll-down animate-arrow-move' to='projects' smooth={true} duration={800}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        {/* <p>Explore some of my work</p> */}
+                    </Link>
+                </div>
+
                 {/* 
                 <div flex items-center>
                     <button>View work <HiArrowNarrowDown /> </button>
@@ -62,7 +75,17 @@ const Home = () => {
 
             {/* <div className='divider'></div> */}
 
+
             <Projects/>
+
+
+
+
+
+
+
+
+
         </div>
 
     );

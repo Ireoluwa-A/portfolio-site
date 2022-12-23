@@ -17,7 +17,7 @@ const Navbar = () => {
 
     const [show, setShow] = useState(true)
     const controlNavbar = () => {
-        setShow(window.scrollY > 500)
+        setShow(!(window.scrollY > 500))
     }
     useEffect(() => {
         window.addEventListener('scroll',
@@ -27,10 +27,9 @@ const Navbar = () => {
             controlNavbar)
         }
     },[])
-    // const [navColor, setNavColor] = useState(['red'])
 
     return (
-        <div className={`nav-container ${show && 'nav-container-hidden'}`}>
+        <div className={`nav-container ${!show && 'nav-container-hidden'}`}>
             <div className='logo'>
                 <a href='/'> I A </a>
             </div>
@@ -39,7 +38,7 @@ const Navbar = () => {
             <div className='nav'>
                 <ul className='hidden md:flex pr-[100px] text-[14px]'> 
                     <li>
-                        <Link href='/' to='projects' smooth={true} duration={500}>
+                        <Link href='/' to='projects' smooth={true} duration={900}>
                             PROJECTS
                             {/* Projects */}
                         </Link>
@@ -53,7 +52,7 @@ const Navbar = () => {
                     </li>
 
                     <li>
-                        <Link to='about' smooth={true} duration={500}>
+                        <Link to='about' smooth={true} duration={900}>
                             ABOUT
                             {/* About */}
                         </Link>
@@ -84,7 +83,7 @@ const Navbar = () => {
                     </a>
                 </li>
                 <li>
-                    <Link to='projects' smooth={true} duration={500}>
+                    <Link to='projects' smooth={true} duration={900}>
                         PROJECTS
                         {/* Projects */}
                     </Link>
