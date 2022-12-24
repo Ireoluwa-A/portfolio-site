@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-
 import "../styles/projects.css";
 
 const Projects = () => {
@@ -12,13 +10,7 @@ const Projects = () => {
                 <h1 className='text-5xl tracking-wider font-WorkSans'>Projects</h1>
                 <div className='divider'></div>
             </div>
-            {/* <div className='flex justify-center h-full'>
-            </div> */}
-
-            
         </div>
     )
-
 }
-
 export default Projects

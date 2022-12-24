@@ -1,7 +1,6 @@
 .nav-container{
     position:fixed;
     width: 100%;
-    /* height: var(--nav-height); */
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -11,7 +10,9 @@
     background-color: #ece8e3;
     letter-spacing: 1px;
     z-index: 4;
-    /* transition-timing-function: ease-in; */
+    transition: 0.3s;
+}
+.nav{
     transition: 0.3s;
 }
 .nav-container-hidden{
@@ -25,8 +26,6 @@
     font-size: 20px;
     cursor: pointer;
 }
-
-
 .nav a{
     position: relative
 }
@@ -37,8 +36,9 @@
     height: 3px;
     width: 0;
     left: 0;
-    bottom: 6px;
+    bottom: 5px;
     bottom: -3px;
+    /* bottom: 5px; */
     transition: 0.3s;
 }
 .nav a:hover:after {

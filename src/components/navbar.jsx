@@ -75,7 +75,7 @@ const Navbar = () => {
                 {!nav ? <FaBars /> : <FaTimes />}
             </div>
 
-            <ul className={!nav ? 'hidden' : 'nav absolute top-0 z-1 left-0 w-full h-screen bg-[#ece8e3] flex flex-col justify-center items-center'} >
+            <ul className={!nav ? 'hidden' : 'nav animate-fade-in-right absolute top-0 z-1 left-0 w-full h-screen bg-[#ece8e3] flex flex-col justify-center items-center'} >
                 <li>
                     <a href="/">
                         HOME
@@ -89,10 +89,10 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li>
-                    <a href='/photography'>
+                    <NavLink to='/photography' activeClassName="active-link">
                         PHOTOGRAPHY
                         {/* Photography */}
-                    </a>
+                    </NavLink> 
                 </li>
 
                 <li>
@@ -103,7 +103,7 @@ const Navbar = () => {
                 </li>
 
                 <li>
-                    <a href={resume} target="_blank">
+                    <a className='font-bold text-[#A3A86D]' href={resume} target="_blank">
                         RESUME
                         {/* Resume */}
                     </a>

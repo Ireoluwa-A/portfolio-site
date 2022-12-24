@@ -8,7 +8,10 @@ module.exports = {
   ],
   theme: {
     fontFamily:{
-      'WorkSans': ['"Work Sans"', 'sans-serif']
+      'WorkSans': ['"Work Sans"', 'sans-serif'],
+      'ChivaMono': ['"Chivo Mono"', 'monospace']
+
+
     },
 
     extend: {
