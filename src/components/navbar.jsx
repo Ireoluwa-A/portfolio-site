@@ -79,33 +79,28 @@ const Navbar = () => {
                 <li>
                     <a href="/">
                         HOME
-                        {/* Resume */}
                     </a>
                 </li>
                 <li>
                     <Link to='projects' smooth={true} duration={900}>
                         PROJECTS
-                        {/* Projects */}
                     </Link>
                 </li>
                 <li>
                     <NavLink to='/photography' activeClassName="active-link">
                         PHOTOGRAPHY
-                        {/* Photography */}
                     </NavLink> 
                 </li>
 
                 <li>
                     <Link to='about' smooth={true} duration={500}>
                         ABOUT
-                        {/* About */}
                     </Link>
                 </li>
 
                 <li>
                     <a className='font-bold text-[#A3A86D]' href={resume} target="_blank">
                         RESUME
-                        {/* Resume */}
                     </a>
                 </li>
             </ul>
