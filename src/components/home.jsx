@@ -7,7 +7,6 @@ import About from './about';
 import "../styles/general.css";
 import "../styles/home.css";
 
-import Typical from 'react-typical'
 import Typed from "react-typed"
 
 import Ire_outline_w from '../assets/Ire_outline_w.png';
@@ -49,31 +48,19 @@ const Home = () => {
                     </div>
 
                     <div className='intro_card_content'>
-                    {/* drop-shadow-md absolute left-[50%] top-[63%] w-1/4 h-[70px] first-letter:mt-10 bg-white animate-fade_in_right */}
                         <Typed className='font-sans font-bold pt-[-20px] translate-y-[40px] pl-[10px] tracking-wider md:text-xl'
-                        strings={[
-                                "SOFTWARE ENGINEER","      ",
-                                "PHOTOGRAPHER","       ", 
-                                "POLYGLOT","        ",
-                                "MUSICIAN","        "
-                            ]}
-                            typeSpeed={40}
-                            backSpeed={60}
-                            loop
-                            />
-
-                    <p className='font-sans max-w-[1/4] -translate-y-[1px] text-xs pl-[10px] 
-                                tracking-wider'>
-                        Carnegie Mellon student, passionate about tech, language, photography, and plantains
-                    </p>
-                        
+                            strings={[
+                                    "SOFTWARE ENGINEER","      ",
+                                    "PHOTOGRAPHER","           ", 
+                                    "POLYGLOT","               ",
+                                    "MUSICIAN","               "
+                                ]}
+                            typeSpeed={40} backSpeed={60} loop />
+                        <p className='font-sans max-w-[1/4] -translate-y-[1px] text-xs pl-[10px] 
+                                    tracking-wider'>
+                            Carnegie Mellon student, passionate about tech, language, photography, and plantains
+                        </p>  
                     </div>
-                   
-
-                </div>
-
-                <div className='name-mobile md:name-main'>
-
                 </div>
                             
                 <div className='scroll_down_container'>
@@ -87,9 +74,9 @@ const Home = () => {
 
             </section>
             
-
-
             <Projects/>
+            {/* Divider */}
+            <div className='w-full h-[100px]'></div>
             <About/>
 
         </div>

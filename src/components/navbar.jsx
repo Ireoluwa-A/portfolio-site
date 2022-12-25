@@ -50,14 +50,12 @@ const Navbar = () => {
                             {/* Photography */}
                         </NavLink> 
                     </li>
-
                     <li>
                         <Link to='about' smooth={true} duration={900}>
                             ABOUT
                             {/* About */}
                         </Link>
                     </li>
-
                     <li>
                         <a className='font-bold text-[#A3A86D]' href={resume} target="_blank">
                             RESUME
@@ -67,14 +65,11 @@ const Navbar = () => {
                 </ul>
             </div>
 
-
             {/* Mobile menu  */}
-
             {/* Hamburger*/}
             <div onClick={handleClick} className='md:hidden pr-[5%] z-20'>
                 {!nav ? <FaBars /> : <FaTimes />}
             </div>
-
             <ul className={!nav ? 'hidden' : 'nav animate-fade-in-right absolute top-0 z-1 left-0 w-full h-screen bg-[#ece8e3] flex flex-col justify-center items-center'} >
                 <li>
                     <a href="/">
@@ -91,29 +86,17 @@ const Navbar = () => {
                         PHOTOGRAPHY
                     </NavLink> 
                 </li>
-
                 <li>
                     <Link to='about' smooth={true} duration={500}>
                         ABOUT
                     </Link>
                 </li>
-
                 <li>
                     <a className='font-bold text-[#A3A86D]' href={resume} target="_blank">
                         RESUME
                     </a>
                 </li>
             </ul>
-
-            {/* <div className='flex fixed flex-col top-[35%] left-0'>
-                <ul>
-                    <li className='w-[160px] h-[60px] flex justify-between items-center' >
-                        <a className='flex justify-between items-center w-full href='/'>Linkedin</a>
-
-                    </li>
-                </ul>
-
-            </div> */}
 
         </div>
 

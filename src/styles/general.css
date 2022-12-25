@@ -1,12 +1,16 @@
+/* GLOBAL CSS VARIABLES */
+:root{
+    --blue: #7C9AB9
+}
 .divider{
     position: relative;
     width: 90%;
-    height: 25px;
+    height: 30px;
     /* background-color: red; */
-    background-color: #7C9AB9;
+    background-color: var(--blue);
     /* opacity: 0.9; */
     margin-left: 5%;
-    margin-top: -4%;
+    margin-top: -5%;
     z-index: -1;
     /* filter: grayscale(20%); */
 }

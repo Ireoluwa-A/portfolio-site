@@ -9,8 +9,8 @@ module.exports = {
   theme: {
     fontFamily:{
       'WorkSans': ['"Work Sans"', 'sans-serif'],
-      'ChivaMono': ['"Chivo Mono"', 'monospace']
-
+      'ChivaMono': ['"Chivo Mono"', 'monospace'],
+      'Lato': ['Lato', 'sans-serif']
 
     },
 
