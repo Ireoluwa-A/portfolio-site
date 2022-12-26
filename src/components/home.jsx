@@ -83,9 +83,9 @@ const Home = () => {
             
             <div className='hidden md:flex '>
                 <div className='socials_container' >
-                    <a href='https://github.com/Ireoluwa-A'><FaGithub className='social_icon'></FaGithub></a>
-                    <a href='https://www.linkedin.com/in/ire-alarape/'><FaLinkedinIn className='social_icon'></FaLinkedinIn></a>
-                    <a href='https://github.com/Ireoluwa-A'><FaInstagram className='social_icon'></FaInstagram></a>
+                    <a target="_blank" href='https://github.com/Ireoluwa-A'><FaGithub className='social_icon'></FaGithub></a>
+                    <a target="_blank"  href='https://www.linkedin.com/in/ire-alarape/'><FaLinkedinIn className='social_icon'></FaLinkedinIn></a>
+                    <a target="_blank"  href='https://github.com/Ireoluwa-A'><FaInstagram className='social_icon'></FaInstagram></a>
                     <div className='socials_line'></div>
                     <img className='leaves'src={leaves}/>
                 </div>
