@@ -4,6 +4,8 @@ import {Link} from 'react-scroll'
 import Projects from './projects';
 import About from './about';
 
+import leaves from '../assets/leaves.png';
+
 import "../styles/general.css";
 import "../styles/home.css";
 
@@ -13,11 +15,10 @@ import Ire_outline_w from '../assets/Ire_outline_w.png';
 import Ire_outline_b from '../assets/Ire_outline_b.png';
 import Ire_gif_w from '../assets/camera_capture_final.gif';
 import {HiArrowNarrowDown} from 'react-icons/hi'
-import {FaBars, FaTimes, FaGitHub, FaLinkedin, FaRegistered,FaYoutube} from 'react-icons/fa';
-
-
-
-
+import {FaBars, FaTimes, FaGithub, 
+        FaLinkedin, FaRegistered,FaYoutube,
+        FaInstagram,
+        FaLinkedinIn} from 'react-icons/fa';
  
 const Home = () => {
     
@@ -44,7 +45,7 @@ const Home = () => {
                         onMouseEnter={() => setAnimated(() => true)}
                         onAnimationEnd={() => setAnimated(() => false)}
                     >
-                        <a className={`cam_animation ${animated ? 'cam_animated' : ''} `} href='/#/photography'></a>
+                        <a className={`cam_animation ${animated ? 'cam_animated' : ''} `} href='/#/photography' target="_blank"></a>
                     </div>
 
                     <div className='intro_card_content'>
@@ -75,9 +76,23 @@ const Home = () => {
             </section>
             
             <Projects/>
-            {/* Divider */}
-            <div className='w-full h-[100px]'></div>
+            
+            {/* Divider */} <div className='w-full h-[100px]'></div>
+
             <About/>
+            
+            <div className='hidden md:flex '>
+                <div className='socials_container' >
+                    <a href='https://github.com/Ireoluwa-A'><FaGithub className='social_icon'></FaGithub></a>
+                    <a href='https://www.linkedin.com/in/ire-alarape/'><FaLinkedinIn className='social_icon'></FaLinkedinIn></a>
+                    <a href='https://github.com/Ireoluwa-A'><FaInstagram className='social_icon'></FaInstagram></a>
+                    <div className='socials_line'></div>
+                    <img className='leaves'src={leaves}/>
+                </div>
+            
+            </div>
+            
+            
 
         </div>
 

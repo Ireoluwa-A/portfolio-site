@@ -5,6 +5,7 @@ import {BsFillPersonLinesFill} from 'react-icons/bs'
 
 import {NavLink} from "react-router-dom";
 
+// import "../styles/general.css";
 import "../styles/navbar.css";
 import resume from "../assets/resume.pdf";
 
@@ -17,7 +18,7 @@ const Navbar = () => {
 
     const [show, setShow] = useState(true)
     const controlNavbar = () => {
-        setShow(!(window.scrollY > 500))
+        setShow(!(window.scrollY > 350))
     }
     useEffect(() => {
         window.addEventListener('scroll',
@@ -36,14 +37,13 @@ const Navbar = () => {
 
             {/* NAV Items */}
             <div className='nav'>
-                <ul className='hidden md:flex pr-[100px] text-[14px]'> 
+                <ul className='hidden md:flex pr-[7vw] text-[14px]'> 
                     <li>
                         <Link href='/' to='projects' smooth={true} duration={900}>
                             PROJECTS
                             {/* Projects */}
                         </Link>
                     </li>
-
                     <li>
                         <NavLink to='/photography' activeClassName="active-link">
                             PHOTOGRAPHY

@@ -46,7 +46,6 @@ const Photography = () => {
     ]
 
 
-
     return (
         <div name='photography' className='bg-[#ece8e3] pt-[80px] w-full h-max flex justify-center flex-col align-middle'>   
             <div className='gallery-wrapper w-full h-screen'>

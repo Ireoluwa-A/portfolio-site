@@ -1,5 +1,5 @@
 .nav-container{
-    position:fixed;
+    position: fixed;
     width: 100%;
     height: 80px;
     display: flex;
@@ -19,7 +19,8 @@
     transform: translateY(-80px);
 }
 .logo{
-    padding-left: 10%;
+    padding-left: 7vw;
+    /* padding-left: 10vw; */
 }
 .logo a{
     font-weight: bold;
@@ -38,7 +39,6 @@
     left: 0;
     bottom: 5px;
     bottom: -3px;
-    /* bottom: 5px; */
     transition: 0.3s;
 }
 .nav a:hover:after {
