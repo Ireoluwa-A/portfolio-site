@@ -57,7 +57,7 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <a href={resume} target="_blank">
+                        <a target="_blank">
                             RESUME
                             {/* Resume */}
                         </a>
