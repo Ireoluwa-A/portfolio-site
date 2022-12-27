@@ -7,6 +7,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import "../styles/photography.css";
 
+// import GALLERY from '../assets/gallery/gallery.js';
 import Img1 from '../assets/gallery/1.jpg';
 import Img2 from '../assets/gallery/2.jpg';
 import Img3 from '../assets/gallery/3.jpg';
@@ -25,12 +26,11 @@ import Img13 from '../assets/gallery/13.jpg';
 
 const Photography = () => {
 
-    // let color = A3A86D;
     let data1 = [
         {id: 1, imgSrc: Img1, name: 'Constantine Westerink', date: 'April 2021'},
         {id: 2, imgSrc: Img2},
         {id: 7, imgSrc: Img7},
-        {id: 10, imgSrc: Img10}
+        {id: 10, Img10}
     ]
     let data2 = [
         {id: 3, imgSrc: Img3, name: 'Tyrece Jeffrey', date: 'October 2022'},
@@ -47,31 +47,31 @@ const Photography = () => {
 
 
     return (
-        <div name='photography' className='bg-[#ece8e3] pt-[80px] w-full h-max flex justify-center flex-col align-middle'>   
+        <div name='photography' className='bg-[#ececec] pt-[80px] w-full h-max flex justify-center flex-col align-middle'>   
             <div className='gallery-wrapper w-full h-screen'>
                 <p className='gallery-title flex text-[30px] font-bold animate-fade_in_left'>
                     FEATURED
                 </p>
                     <div className='w-full h-full gallery-content animate-fade_in_right'>
                         <div className="flex flex-col md:flex-row justify-between animate-fade_in_right">
-                            <div class="dream w-full md:w-[32.5%]">
+                            <div className="dream w-full md:w-[32.5%]">
                                 {data1.map((item,index)=>{
                                 return(
-                                    <div class='gallery-box'>
-                                        <LazyLoadImage effect="blur" key={index} src={item.imgSrc}/> 
+                                    <div key={index} className='gallery-box'>
+                                        <LazyLoadImage effect="blur" src={item.imgSrc}/> 
                                         <div className='gallery-description'>
                                             <h2>{item.name}</h2>
                                             <h3>{item.date}</h3>
                                         </div>
                                     </div>
-                                )
+                                ) 
                                 })}
                             </div>
-                            <div class="dream w-full md:w-[32.5%]">
+                            <div className="dream w-full md:w-[32.5%]">
                                 {data2.map((item,index)=>{
                                 return(
-                                    <div class='gallery-box'>
-                                        <LazyLoadImage effect="blur" key={index} src={item.imgSrc}/> 
+                                    <div key={index} className='gallery-box'>
+                                        <LazyLoadImage effect="blur"  src={item.imgSrc}/> 
                                         <div className='gallery-description'>
                                             <h2>{item.name}</h2>
                                             <h3>{item.date}</h3>
@@ -80,11 +80,11 @@ const Photography = () => {
                                 )
                                 })}
                             </div>
-                            <div class="dream w-full md:w-[32.5%]">
+                            <div className="dream w-full md:w-[32.5%]">
                                 {data3.map((item,index)=>{
                                 return(
-                                    <div class='gallery-box'>
-                                        <LazyLoadImage effect="blur" key={index} src={item.imgSrc}/> 
+                                    <div key={index} className='gallery-box'>
+                                        <LazyLoadImage effect="blur" src={item.imgSrc}/> 
                                         <div className='gallery-description'>
                                             <h2>{item.name}</h2>
                                             <h3>{item.date}</h3>

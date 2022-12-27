@@ -1,27 +1,20 @@
-import React, {useState, useEffect, useRef} from 'react'
+import React, {useState, useEffect, useRef, Suspense} from 'react'
 import {Link} from 'react-scroll' 
-
-import Projects from './projects';
-import About from './about';
-
-import leaves from '../assets/leaves.png';
 
 import "../styles/general.css";
 import "../styles/home.css";
 
 import Typed from "react-typed"
 
-import Ire_outline_w from '../assets/Ire_outline_w.png';
-import Ire_outline_b from '../assets/Ire_outline_b.png';
-import Ire_gif_w from '../assets/camera_capture_final.gif';
-import {HiArrowNarrowDown} from 'react-icons/hi'
-import {FaBars, FaTimes, FaGithub, 
-        FaLinkedin, FaRegistered,FaYoutube,
-        FaInstagram,
-        FaLinkedinIn} from 'react-icons/fa';
- 
+import {FaGithub,FaInstagram,FaLinkedinIn} from 'react-icons/fa';
+import {HiOutlineMail} from 'react-icons/hi'
+import leaves from '../assets/leaves.png';
+
+import About from './about';
+const Projects = React.lazy(() => import ('./projects'));
+
 const Home = () => {
-    
+
     // Animated camera
     const [animated, setAnimated] = useState(false);
 
@@ -59,7 +52,7 @@ const Home = () => {
                             typeSpeed={40} backSpeed={60} loop />
                         <p className='font-sans max-w-[1/4] -translate-y-[1px] text-xs pl-[10px] 
                                     tracking-wider'>
-                            Carnegie Mellon student, passionate about tech, language, photography, and plantains
+                            Carnegie Mellon student, passionate about tech, language, photography, and plantains.
                         </p>  
                     </div>
                 </div>
@@ -68,14 +61,18 @@ const Home = () => {
                     <Link href='/' className ='scroll_down animate-arrow-move' to='projects' smooth={true} duration={800}>
                         <span></span>
                         <span></span>
-                        <span></span>
-                        {/* <p>Explore some of my work</p> */}
+                        <span></span>     
                     </Link>
+                    {/* <p className='text-sm mr-[-15%]'>Explore some of my work</p> */}
                 </div>
 
             </section>
             
-            <Projects/>
+            <Suspense>
+            {/* <Suspense fallback={<Loader/>}> */}
+                <Projects/>
+            </Suspense>
+            
             
             {/* Divider */} <div className='w-full h-[100px]'></div>
 
@@ -83,13 +80,13 @@ const Home = () => {
             
             <div className='hidden md:flex '>
                 <div className='socials_container' >
-                    <a target="_blank" href='https://github.com/Ireoluwa-A'><FaGithub className='social_icon'></FaGithub></a>
+                    <a className='social_btn' target="_blank" href='https://github.com/Ireoluwa-A'><FaGithub className='social_icon'></FaGithub></a>
                     <a target="_blank"  href='https://www.linkedin.com/in/ire-alarape/'><FaLinkedinIn className='social_icon'></FaLinkedinIn></a>
                     <a target="_blank"  href='https://github.com/Ireoluwa-A'><FaInstagram className='social_icon'></FaInstagram></a>
+                    <a target="_blank"  href='mailto:irealarape@gmail.com'><HiOutlineMail className='social_icon'></HiOutlineMail></a>
                     <div className='socials_line'></div>
-                    <img className='leaves'src={leaves}/>
+                    {/* <img className='leaves'src={leaves}/> */}
                 </div>
-            
             </div>
             
             

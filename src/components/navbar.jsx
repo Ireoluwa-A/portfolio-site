@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {FaBars, FaTimes, FaGitHub, FaLinkedin, FaRegistered} from 'react-icons/fa';
-import {HiOutlineMail} from 'react-icons/hi'
+
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 
 import {NavLink} from "react-router-dom";
@@ -57,7 +57,7 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <a className='font-bold text-[#A3A86D]' href={resume} target="_blank">
+                        <a href={resume} target="_blank">
                             RESUME
                             {/* Resume */}
                         </a>

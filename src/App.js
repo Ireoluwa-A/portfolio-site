@@ -1,7 +1,7 @@
 // import logo from './images/logo.svg';
 import './styles/App.css';
 
-import {useRef, useEffect} from 'react';
+import React, {useRef, useEffect} from 'react';
 
 import Navbar from './components/navbar';
 import Home from './components/home';
@@ -11,13 +11,13 @@ import {Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <main>
-      <Navbar/>
-      <Routes>  
-        <Route exact path="/" element={<Home/>}/>
-        <Route path='/photography' element={<Photography/>}/>
-      </Routes>
-    </main>
+      <React.Fragment>
+        <Navbar/>
+        <Routes>  
+          <Route exact path="/" element={<Home/>}/>
+          <Route path='/photography' element={<Photography/>}/>
+        </Routes>
+      </React.Fragment>
   );
 }
 
