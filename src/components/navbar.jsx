@@ -4,12 +4,13 @@ import {FaBars, FaTimes, FaGitHub, FaLinkedin, FaRegistered} from 'react-icons/f
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 
 import {NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 // import "../styles/general.css";
 import "../styles/navbar.css";
 import resume from "../assets/resume.pdf";
 
-import {Link} from 'react-scroll' 
+// import {Link} from 'react-scroll' 
 
 
 const Navbar = () => {
@@ -17,8 +18,11 @@ const Navbar = () => {
     const handleClick = () => setNav(!nav)
 
     const [show, setShow] = useState(true)
+    // store scrollY to make navbar reappear on scroll up
+    var oldScrollY = window.scrollY;
     const controlNavbar = () => {
-        setShow(!(window.scrollY > 350))
+        setShow((!(window.scrollY > 350)) || (oldScrollY > window.scrollY))
+        oldScrollY = window.scrollY
     }
     useEffect(() => {
         window.addEventListener('scroll',
@@ -30,7 +34,7 @@ const Navbar = () => {
     },[])
 
     return (
-        <div className={`nav-container ${!show && 'nav-container-hidden'}`}>
+        <header className={`nav-container ${!show && 'nav-container-hidden'}`}>
             <div className='logo'>
                 <a href='/'> I A </a>
             </div>
@@ -39,10 +43,11 @@ const Navbar = () => {
             <div className='nav'>
                 <ul className='hidden md:flex pr-[7vw] text-[14px]'> 
                     <li>
-                        <Link href='/' to='projects' smooth={true} duration={900}>
-                            PROJECTS
-                            {/* Projects */}
-                        </Link>
+                        {/* <a href="/#projects">Projects</a> */}
+                        <Link to='/#projects' >PROJECTS</Link>
+                        {/* <Link href='/' to='projects' smooth={true} duration={900}>
+                            PROJECTS */}
+                        {/* </Link>  */}
                     </li>
                     <li>
                         <NavLink to='/photography' activeClassName="active-link">
@@ -51,10 +56,13 @@ const Navbar = () => {
                         </NavLink> 
                     </li>
                     <li>
-                        <Link to='about' smooth={true} duration={900}>
+                        <Link to='/#about' >ABOUT</Link>
+                        {/* <a href="/#projects">Projects</a>
+                        <Link href='/' to='about' smooth={true} duration={900}>
                             ABOUT
                             {/* About */}
-                        </Link>
+                        {/* </Link> */} 
+
                     </li>
                     <li>
                         <a target="_blank">
@@ -64,6 +72,7 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
+
 
             {/* Mobile menu  */}
             {/* Hamburger*/}
@@ -97,8 +106,7 @@ const Navbar = () => {
                     </a>
                 </li>
             </ul>
-
-        </div>
+        </header>
 
         
         

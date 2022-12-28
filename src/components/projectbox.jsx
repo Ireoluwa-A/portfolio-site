@@ -26,11 +26,11 @@ const ProjectBox = (props) => {
             <div className={`projects_description ${proj.descriptionPos}`}>
                 <h1 className='font-WorkSans text-[25px]'>{proj.title}</h1>
                 <div className='projects_blurb drop-shadow-lg'>
-                    <p className='font-Lato text-[15px] text-[#2d2d2d]'>
+                    <p className='font-Lato text-[15px] text-[#5e5e5e]'>
                         {proj.description}
                     </p>
                 </div>
-                <div className='projects_tech font-Lato text-[#383838]'>
+                <div className='projects_tech font-Lato text-white'>
                     {proj.technology.map((item,index)=>{
                         return(
                             <span key={index}>{item.name}</span>

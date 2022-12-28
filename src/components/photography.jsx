@@ -30,7 +30,8 @@ const Photography = () => {
         {id: 1, imgSrc: Img1, name: 'Constantine Westerink', date: 'April 2021'},
         {id: 2, imgSrc: Img2},
         {id: 7, imgSrc: Img7},
-        {id: 10, Img10}
+        {id: 10, imgSrc: Img10},
+        // {id: 15, Img11}
     ]
     let data2 = [
         {id: 3, imgSrc: Img3, name: 'Tyrece Jeffrey', date: 'October 2022'},
@@ -47,8 +48,10 @@ const Photography = () => {
 
 
     return (
-        <div name='photography' className='bg-[#ececec] pt-[80px] w-full h-max flex justify-center flex-col align-middle'>   
-            <div className='gallery-wrapper w-full h-screen'>
+        <div name='photography' className='photography_container'>  
+         
+            <section className='gallery-wrapper w-full h-screen'>
+                
                 <p className='gallery-title flex text-[30px] font-bold animate-fade_in_left'>
                     FEATURED
                 </p>
@@ -95,7 +98,7 @@ const Photography = () => {
                             </div>
                          </div>
                 </div> 
-            </div>
+            </section>
 
 
             {/* <div className='w-full h-screen bg-[#ece8e3]' >

@@ -1,3 +1,15 @@
+.photography_container{
+    background-color: var(--backgroundcolor);
+    padding-top: 80px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: middle;
+    justify-content: center;
+}
+
+
 .gallery-wrapper{
     margin: auto;
     /* margin-top: 10%; */

@@ -1,4 +1,6 @@
 import React, {useRef, useEffect, useState} from 'react'
+
+import { useLocation } from 'react-router-dom';
 import {useInView} from 'react-intersection-observer';
 
 import ProjectBox from './projectbox';
@@ -6,8 +8,21 @@ import ProjectBox from './projectbox';
 import "../styles/general.css";
 import "../styles/projects.css";
 
-
 const Projects = () => {
+    const location = useLocation()
+    useEffect(()=> {
+        if (location.hash) {
+            console.log(location.hash.slice(1));
+            let elem = document.getElementById(location.hash.slice(1))
+            console.log(elem)
+            if (elem) {
+                elem.scrollIntoView({behavior: "smooth"})
+            }
+        } else {
+        window.scrollTo({top:0,left:0, behavior: "smooth"})
+        }
+    }, [location,])
+
 
     const {ref: projectHeader, inView: projectHeaderVisible, entry} = useInView()
     const [projBoxes, setProjBoxes] = useState([
@@ -21,7 +36,7 @@ const Projects = () => {
             title: 'YOUKARYOTE',
             description: `To the fans of Civ 6 and Cellular Biology - 
                           an RTS game where you micromanage your cell,
-                          produce ATP, perform meitosis, and expand until you conquer the map. (porting to unity)`,
+                          produce ATP, perform meitosis, and expand until you conquer the map (porting to unity).`,
             technology: [{name: 'Python'}, {name: 'CMUGraphics Lib'}, {name: 'Unity'}, {name: 'C#'}],
             link: 'https://github.com/Ireoluwa-A/Youkaryote',
             linkPos: 'projects_link_r'
@@ -32,23 +47,21 @@ const Projects = () => {
             imageLeft: 'hidden',
             imageRight: '',
             title: 'EDE',
-            description: `Language Learning schedule organizer Lorem ipsum dolor sit amet,
-                         consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, `,
+            description: `To fellow language lovers, a tool to organize the myriad of resources.`,
             technology: [{name: 'Javascript'}, {name: 'Flask'}, {name: 'SQL'}, {name: 'HTML & CSS'}],
             link: 'https://github.com/Ireoluwa-A/EDE', 
             linkPos: 'projects_link_l'
         },
         {
-            background: 'default_bg',
+            background: 'c0_bg',
             descriptionPos:'projects_description_r',
             imageLeft: '',
             imageRight: 'hidden',
             title: 'THE C0 VIRTUAL MACHINE',
-            description: '',
+            description: `Course final project, implementing instructions enabling virtual machine interprete programs written in language C0 (subset language of C made by CMU)`,
             technology: [{name: 'C'}],
             link: 'https://github.com/Ireoluwa-A/Youkaryote',
-            linkPos: 'projects_link_r'
+            linkPos: 'hide'
         },
         {
             background: 'default_bg',
@@ -57,7 +70,7 @@ const Projects = () => {
             imageRight: '',
             title: 'BCNF VISUALIZER',
             description: `Aid other students learning database design visualize breaking
-                          an abstract relation into Boys-Codde Normal Form.`,
+                            an abstract relation into Boys-Codde Normal Form.`,
             technology: [{name: 'Javascript'}, {name: 'HTML & CSS'}],
             link: 'https://github.com/Ireoluwa-A/Youkaryote',
             linkPos: 'projects_link_l'
@@ -69,13 +82,13 @@ const Projects = () => {
     }
     
     return (
-        <section name='projects' className='projects_container'>
+        <section id='projects' name='projects' className='projects_container'>
             {/* Title */}
             <div ref={projectHeader} 
                 className={`projects_header 
                             ${projectHeaderVisible && scrollingFromAbove(entry) ? 
                              'animate-fade_in_left' : ''}`} >
-                <h1 className='text-4xl tracking-wider font-WorkSans'>MY</h1>
+                <h1 className='text-3xl tracking-wider font-WorkSans'>MY</h1>
                 <h1 className='text-4xl tracking-wider font-WorkSans'>PROJECTS</h1>
                 <div className='divider'></div>
             </div>

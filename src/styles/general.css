@@ -4,6 +4,12 @@
     --green: #A3A86D;
     --darkerWhite: #e3e1de;
     --brown: #c89967;
+    
+    --offWhite: #ece8e3;
+    --backgroundColor: #ececec;
+    
+    --socialsColor: rgb(68, 68, 68);
+    --secondaryColor: var(--blue);
 }
 
 
@@ -17,3 +23,9 @@
     z-index: -1;
 }
 
+.hide{
+    display: none;
+}
+.hide >*{
+    display: none;
+}

@@ -10,9 +10,12 @@
 
 
 @layer base{
+
     body {
         /* @apply bg-[#ece8e3]; */
+        /* @apply bg-[#ece8e3]; */
         @apply bg-[#ececec];
+        scroll-behavior: smooth;
         /* @apply font-[Roboto]; */
         /* @apply font-["Work Sans"]; */
         /* @apply font-[Helvetica]; */

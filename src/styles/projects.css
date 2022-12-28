@@ -83,20 +83,21 @@
     border-radius: 10px;
     /* background-color: var(--darkerWhite); */
     /* background-color: #434343; */
-    
     /* padding-left: 20px; */
     display: flex;
     flex-direction: column;
     align-items: right;
     justify-content: center;
 }
-.projects_tech{
+.projects_tech span{ 
+    background-color: grey;
+    border-radius: 20px;
     /* padding-top: 3px; */
 }
 .projects_tech > *{
-    /* padding-left: 0.75rem  */
-    padding-right: 0.75rem;
+    padding: 3px 0.75rem 3px 0.85rem;
     font-size: 12px;
+    margin-right: 10px;
     /* line-height: 1.25rem 20px; */
 }
 .projects_link{
@@ -116,9 +117,10 @@
     margin-right: -10px;
 }
 .projects_link >*{
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    padding-top: 5px;
+    /* padding-left: 0.75rem; */
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
     transition: 0.3s;
 }
 .projects_link >*:hover{
@@ -172,9 +174,16 @@
 .youkaryote_bg{
     background-image: url('../assets/youkaryote.jpg');
 }
+.youkaryote_bg:hover{
+    background-image: url('../assets/youkaryote2.jpg');
+}
+.c0_bg{
+    background-image: url('../assets/c0vm.jpg');
+}
 .ede_bg{
     background-image: url('../assets/EDE.jpg');
 }
+
 .sentimental_bg{
     background-color: grey;
 }

@@ -6,21 +6,27 @@
     justify-content: space-between;
     align-items: center;
     padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    background-color: #ececec;
+    /* padding-right: 0.75rem; */
+    /* padding-right: 0.4rem; */
+    background-color: var(--backgroundColor);
     letter-spacing: 1px;
     z-index: 4;
     transition: 0.5s;
 }
 .nav{
     transition: 0.3s;
+    /* margin-right: -1vw; */
 }
 .nav-container-hidden{
     transform: translateY(-80px);
 }
 .logo{
-    padding-left: 7vw;
+    margin-left: 3vw;
+    transition: 0.3s;
     /* padding-left: 10vw; */
+}
+.logo:hover{
+    transform: scale(1.1);
 }
 .logo a{
     font-weight: bold;
@@ -33,7 +39,7 @@
 .nav a:after {
     content: "";
     position: absolute;
-    background-color: #7C9AB9;
+    background-color: var(--secondaryColor);
     height: 3px;
     width: 0;
     left: 0;

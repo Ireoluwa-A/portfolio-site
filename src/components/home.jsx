@@ -5,10 +5,7 @@ import "../styles/general.css";
 import "../styles/home.css";
 
 import Typed from "react-typed"
-
-import {FaGithub,FaInstagram,FaLinkedinIn} from 'react-icons/fa';
-import {HiOutlineMail} from 'react-icons/hi'
-import leaves from '../assets/leaves.png';
+import { TypeAnimation } from 'react-type-animation';
 
 import About from './about';
 const Projects = React.lazy(() => import ('./projects'));
@@ -19,8 +16,7 @@ const Home = () => {
     const [animated, setAnimated] = useState(false);
 
     return (
-        <div name='home' className='w-full h-full'>
-            
+        <main name='home' className='w-full h-full pb-[150px]'>
             <section className='intro_section'>
 
                 <div className='intro_title'>
@@ -32,29 +28,51 @@ const Home = () => {
                     </h1>
                 </div>
 
-                <div className='intro_card drop-shadow-lg animate-fade_in_right'>
+                <div className='intro_card  drop-shadow-lg animate-fade_in_right'>
+                    {/* <div className='tape1'></div> */}
                     <div 
                         className='card_screen'
                         onMouseEnter={() => setAnimated(() => true)}
                         onAnimationEnd={() => setAnimated(() => false)}
-                    >
+                    >  
                         <a className={`cam_animation ${animated ? 'cam_animated' : ''} `} href='/#/photography' target="_blank"></a>
                     </div>
 
                     <div className='intro_card_content'>
-                        <Typed className='font-sans font-bold pt-[-20px] translate-y-[40px] pl-[10px] tracking-wider md:text-xl'
+                        {/* <Typed className='font-sans font-bold pt-[-20px] translate-y-[40px] pl-[10px] tracking-wider md:text-xl'
                             strings={[
                                     "SOFTWARE ENGINEER","      ",
                                     "PHOTOGRAPHER","           ", 
                                     "POLYGLOT","               ",
                                     "MUSICIAN","               "
                                 ]}
-                            typeSpeed={40} backSpeed={60} loop />
-                        <p className='font-sans max-w-[1/4] -translate-y-[1px] text-xs pl-[10px] 
-                                    tracking-wider'>
+                            typeSpeed={90} backSpeed={60} loop /> */}
+
+
+                        <TypeAnimation className='font-sans text-sm font-bold  pl-[10px] tracking-wider md:text-xl'
+                            sequence={[
+                                'SOFTWARE ENGINEER', // Types 'One'
+                                15000, // Waits 1s
+                                'PHOTOGRAPHER', // Deletes 'One' and types 'Two'
+                                8000, // Waits 2s
+                                'POLYGLOT', // Types 'Three' without deleting 'Two'
+                                7000,
+                                () => {
+                                }
+                            ]}
+                            wrapper="p"
+                            cursor={true}
+                            repeat={Infinity}    
+                        />
+                        <p className='font-sans font-bold max-w-[1/4] -translate-y-[1px] text-[13px] pl-[10px] pt-[-10px] mt-[-2px] pb-[5px] 
+                                    tracking-wider text-[#5b5b5b]'>#7C9AB9</p>
+                        <p className='font-sans max-w-[1/4] -translate-y-[3px] text-xs pl-[10px] 
+                                    tracking-wider pb-[10px]'>
                             Carnegie Mellon student, passionate about tech, language, photography, and plantains.
                         </p>  
+                        
                     </div>
+                    {/* <div className='tape2'></div> */}
                 </div>
                             
                 <div className='scroll_down_container'>
@@ -78,20 +96,7 @@ const Home = () => {
 
             <About/>
             
-            <div className='hidden md:flex '>
-                <div className='socials_container' >
-                    <a className='social_btn' target="_blank" href='https://github.com/Ireoluwa-A'><FaGithub className='social_icon'></FaGithub></a>
-                    <a target="_blank"  href='https://www.linkedin.com/in/ire-alarape/'><FaLinkedinIn className='social_icon'></FaLinkedinIn></a>
-                    <a target="_blank"  href='https://github.com/Ireoluwa-A'><FaInstagram className='social_icon'></FaInstagram></a>
-                    <a target="_blank"  href='mailto:irealarape@gmail.com'><HiOutlineMail className='social_icon'></HiOutlineMail></a>
-                    <div className='socials_line'></div>
-                    {/* <img className='leaves'src={leaves}/> */}
-                </div>
-            </div>
-            
-            
-
-        </div>
+        </main>
 
     );
 }
