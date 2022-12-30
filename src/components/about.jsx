@@ -34,7 +34,7 @@ const About = () => {
             <div className='about_body'>
                 <div className='about_description'>
                     <p>
-                        I'm Ire. A sophomore studying Information Systems at CMU.
+                        {/* I'm Ire. A sophomore studying Information Systems at CMU. */}
                     </p>
                 </div>
                 <div className='about_images'>
