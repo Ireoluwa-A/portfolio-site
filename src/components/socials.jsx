@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-import "../styles/general.css";
+// import "../styles/general.css";
 import "../styles/socials.css";
 
 import {FaGithub,FaInstagram,FaLinkedinIn} from 'react-icons/fa';

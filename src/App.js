@@ -1,7 +1,6 @@
-// import logo from './images/logo.svg';
 import './styles/App.css';
 
-import React, {useRef, useEffect} from 'react';
+import React from 'react';
 
 import Navbar from './components/navbar';
 import Socials from './components/socials';
@@ -24,6 +23,7 @@ function App() {
           <Route exact path="/" element={<Home/>}/>
           <Route path='/photography' element={<Photography/>}/>
         </Routes>
+
         <Footer/>
         
       </React.Fragment>

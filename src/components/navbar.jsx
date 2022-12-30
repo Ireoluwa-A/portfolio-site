@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {FaBars, FaTimes, FaGitHub, FaLinkedin, FaRegistered} from 'react-icons/fa';
+import {FaBars, FaTimes} from 'react-icons/fa';
 
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 
@@ -21,7 +21,7 @@ const Navbar = () => {
     // store scrollY to make navbar reappear on scroll up
     var oldScrollY = window.scrollY;
     const controlNavbar = () => {
-        setShow((!(window.scrollY > 350)) || (oldScrollY > window.scrollY))
+        setShow(((window.scrollY <= 400)) || (oldScrollY > window.scrollY))
         oldScrollY = window.scrollY
     }
     useEffect(() => {
@@ -44,19 +44,13 @@ const Navbar = () => {
                 <ul className='hidden md:flex pr-[7vw] text-[14px]'> 
                     <li>
                         {/* <a href="/#projects">Projects</a> */}
-                        <Link to='/#projects' >PROJECTS</Link>
+                        <Link className='font-WorkSans' to='/#projects' >PROJECTS</Link>
                         {/* <Link href='/' to='projects' smooth={true} duration={900}>
                             PROJECTS */}
                         {/* </Link>  */}
                     </li>
                     <li>
-                        <NavLink to='/photography' activeClassName="active-link">
-                            PHOTOGRAPHY
-                            {/* Photography */}
-                        </NavLink> 
-                    </li>
-                    <li>
-                        <Link to='/#about' >ABOUT</Link>
+                        <Link className='font-WorkSans' to='/#about'>ABOUT</Link>
                         {/* <a href="/#projects">Projects</a>
                         <Link href='/' to='about' smooth={true} duration={900}>
                             ABOUT
@@ -65,7 +59,13 @@ const Navbar = () => {
 
                     </li>
                     <li>
-                        <a target="_blank">
+                        <NavLink className='font-WorkSans' to='/photography' activeClassName="active-link">
+                            PHOTOGRAPHY
+                        </NavLink> 
+                    </li>
+
+                    <li>
+                        <a className='font-WorkSans' target="_blank">
                             RESUME
                             {/* Resume */}
                         </a>
@@ -86,9 +86,10 @@ const Navbar = () => {
                     </a>
                 </li>
                 <li>
-                    <Link to='projects' smooth={true} duration={900}>
+                    <Link to='/#projects'>PROJECTS</Link>
+                    {/* <Link to='projects' smooth={true} duration={900}>
                         PROJECTS
-                    </Link>
+                    </Link> */}
                 </li>
                 <li>
                     <NavLink to='/photography' activeClassName="active-link">
@@ -96,9 +97,10 @@ const Navbar = () => {
                     </NavLink> 
                 </li>
                 <li>
-                    <Link to='about' smooth={true} duration={500}>
+                    <Link to='/#about'>ABOUT</Link>
+                    {/* <Link to='about' smooth={true} duration={500}>
                         ABOUT
-                    </Link>
+                    </Link> */}
                 </li>
                 <li>
                     <a className='font-bold text-[#A3A86D]' href={resume} target="_blank">

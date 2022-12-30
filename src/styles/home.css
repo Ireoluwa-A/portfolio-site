@@ -1,8 +1,7 @@
+/* //////////////////////////////////////////////////////////////// */
 /* MAIN INTRO PAGE */
+/* //////////////////////////////////////////////////////////////// */
 .intro_section{
-    --card_width: 350px;
-    --card_height: 370px;
-    --card_height: 390px;
     max-width: 1000px;
     height: 100vh;
     min-height: 100vh;
@@ -21,26 +20,17 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: white;
-    /* margin-left: -100px; */
+    background-color: var(--cardBackground);
     margin-left: -110px;
-
     margin-top: -30px;
-    /* margin-top: -30px; */
-
     /* transform: rotate(-20deg); */
-    
-    /* filter: blur(0.6px); */
     /* box-shadow: 2px 5px 5px 5px rgba(136, 136, 136, 0.5); */
 }
 .card_screen{
-    background-color: var(--blue);
+    background-color: var(--cardScreen);
     margin-top: 10px;
     width: 95%;
-    height: 85%;
-    /* margin-top: 15px;
-    width: 90%;
-    height: 75%; */
+    height: 80%;
 }
 .intro_title{
     width: 50%;
@@ -92,10 +82,9 @@
     opacity: 0.8;
     filter: drop-shadow(4px, 4px, 4px, black);
 }
-
 /* //////////////////////////////////////////////////////////////// */
-
 /* BOUNCING SCROLL DOWN ARROW*/
+/* //////////////////////////////////////////////////////////////// */
 .scroll_down_container{
     position: absolute;
     top: 78%;
@@ -105,6 +94,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
 }
 .scroll_down{
     width: 50px;
@@ -144,10 +134,10 @@
         transform: rotate(45deg) translate(20px,20px);
     }
 }
+
 /* //////////////////////////////////////////////////////////////// */
-
-
 /* CUSTOM MOBILE CSS  */
+/* //////////////////////////////////////////////////////////////// */
 @media only screen and (max-width: 768px){
     .intro_section{
         flex-direction: column;
@@ -174,11 +164,11 @@
         top: 84%;
 
     }
-
-
 }
 
-
+/* //////////////////////////////////////////////////////////////// */
+/* CAMERA ANIMATION */
+/* //////////////////////////////////////////////////////////////// */
 .cam_animation{
     cursor: cell;
     width: 100%;
@@ -191,7 +181,6 @@
     background-size: 190% 140%;
 }
 .cam_animated{
-    /* animation: camera 1s ; */
     animation: camera 1s;
 }
 @keyframes camera{

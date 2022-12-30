@@ -1,13 +1,17 @@
+/* //////////////////////////////////////////////////////////////// */
+/* SOCIALS SIDE BAR */
+/* //////////////////////////////////////////////////////////////// */
 .socials_container{
     position: fixed;
     bottom: 0;
-    /* left: 8vw; */
     left: 4vw;
     width: 30px;
     height: 220px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: var(--socialsColor);
+    z-index: 3;
 }
 .socials_container a{
     padding: 7px;
@@ -19,33 +23,19 @@
     top: 0px;
     width: 20px;
     height: 20px;
-    /* margin-bottom: 10px; */
     transition: 0.3s;
-    z-index: 3;
-    color: var(--socialsColor);
-    
 }
 .social_icon:hover{
-    color: var(--green);
+    color: var(--secondaryColor);
     top: -3px;
-    /* margin-bottom: 4px; */
 }
 .socials_line{
     height: 100%;
     margin-top: 3px;
     width: 4px;
-    /* background-color: #A3A86D; */
-    /* background-color: var(--brown); */
-    /* background-color: #6E3B00; */
     background-color: var(--socialsColor);
     border-radius: 10px;
 }
-/* .social_btn{
-    margin-top: 10px;
-}
-.social_btn:hover{
-    margin-top: -5px;
-} */
 .leaves{
     position: fixed;
     bottom: 7%;

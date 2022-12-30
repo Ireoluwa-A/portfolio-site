@@ -12,9 +12,8 @@ const Projects = () => {
     const location = useLocation()
     useEffect(()=> {
         if (location.hash) {
-            console.log(location.hash.slice(1));
             let elem = document.getElementById(location.hash.slice(1))
-            console.log(elem)
+            console.log(elem) 
             if (elem) {
                 elem.scrollIntoView({behavior: "smooth"})
             }
@@ -23,9 +22,8 @@ const Projects = () => {
         }
     }, [location,])
 
-
     const {ref: projectHeader, inView: projectHeaderVisible, entry} = useInView()
-    const [projBoxes, setProjBoxes] = useState([
+    const projBoxes = [
         // List of featured projects and their information
         // Passed as prop to PorjectBox Component
         {
@@ -58,7 +56,7 @@ const Projects = () => {
             imageLeft: '',
             imageRight: 'hidden',
             title: 'THE C0 VIRTUAL MACHINE',
-            description: `Course final project, implementing instructions enabling virtual machine interprete programs written in language C0 (subset language of C made by CMU)`,
+            description: `15-122 final project, written in C, implementing instructions enabling virtual machine interprete programs written in language C0 (subset of C language made by CMU)`,
             technology: [{name: 'C'}],
             link: 'https://github.com/Ireoluwa-A/Youkaryote',
             linkPos: 'hide'
@@ -75,7 +73,7 @@ const Projects = () => {
             link: 'https://github.com/Ireoluwa-A/Youkaryote',
             linkPos: 'projects_link_l'
         }
-    ])
+    ];
 
     function scrollingFromAbove(entry){
         return entry.boundingClientRect.y >= entry.rootBounds.y;
@@ -88,8 +86,8 @@ const Projects = () => {
                 className={`projects_header 
                             ${projectHeaderVisible && scrollingFromAbove(entry) ? 
                              'animate-fade_in_left' : ''}`} >
-                <h1 className='text-3xl tracking-wider font-WorkSans'>MY</h1>
-                <h1 className='text-4xl tracking-wider font-WorkSans'>PROJECTS</h1>
+                <h1 className='text-3xl tracking-wider font-bold font-WorkSans'>MY</h1>
+                <h1 className='text-4xl tracking-wider font-bold font-WorkSans'>PROJECTS</h1>
                 <div className='divider'></div>
             </div>
 

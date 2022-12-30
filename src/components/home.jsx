@@ -1,10 +1,9 @@
 import React, {useState, useEffect, useRef, Suspense} from 'react'
 import {Link} from 'react-scroll' 
 
-import "../styles/general.css";
+// import "../styles/general.css";
 import "../styles/home.css";
 
-import Typed from "react-typed"
 import { TypeAnimation } from 'react-type-animation';
 
 import About from './about';
@@ -20,15 +19,15 @@ const Home = () => {
             <section className='intro_section'>
 
                 <div className='intro_title'>
-                    <h1 className='font-WorkSans text-8xl tracking-wider animate-fade_in_left'>
+                    <h1 className='font-bold font-WorkSans text-8xl tracking-wider animate-fade_in_left'>
                         IRE
                     </h1>
-                    <h1 className='font-WorkSans text-8xl tracking-wider animate-fade_in_left'>
+                    <h1 className='font-bold font-WorkSans text-8xl tracking-wider animate-fade_in_left'>
                         ALARAPE
                     </h1>
                 </div>
 
-                <div className='intro_card  drop-shadow-lg animate-fade_in_right'>
+                <div className='intro_card drop-shadow-lg animate-fade_in_right'>
                     {/* <div className='tape1'></div> */}
                     <div 
                         className='card_screen'
@@ -48,14 +47,13 @@ const Home = () => {
                                 ]}
                             typeSpeed={90} backSpeed={60} loop /> */}
 
-
                         <TypeAnimation className='font-sans text-sm font-bold  pl-[10px] tracking-wider md:text-xl'
                             sequence={[
-                                'SOFTWARE ENGINEER', // Types 'One'
-                                15000, // Waits 1s
-                                'PHOTOGRAPHER', // Deletes 'One' and types 'Two'
-                                8000, // Waits 2s
-                                'POLYGLOT', // Types 'Three' without deleting 'Two'
+                                'SOFTWARE ENGINEER',
+                                15000,
+                                'PHOTOGRAPHER',
+                                8000, 
+                                'POLYGLOT', 
                                 7000,
                                 () => {
                                 }
@@ -64,9 +62,9 @@ const Home = () => {
                             cursor={true}
                             repeat={Infinity}    
                         />
-                        <p className='font-sans font-bold max-w-[1/4] -translate-y-[1px] text-[13px] pl-[10px] pt-[-10px] mt-[-2px] pb-[5px] 
-                                    tracking-wider text-[#5b5b5b]'>#7C9AB9</p>
-                        <p className='font-sans max-w-[1/4] -translate-y-[3px] text-xs pl-[10px] 
+                        {/* <p className='font-sans font-bold max-w-[1/4] -translate-y-[1px] text-[13px] pl-[10px] pt-[-10px] mt-[-2px] pb-[5px] 
+                                    tracking-wider text-[#5b5b5b]'>#7C9AB9</p> */}
+                        <p className='font-sans max-w-[1/4] text-xs pl-[10px] 
                                     tracking-wider pb-[10px]'>
                             Carnegie Mellon student, passionate about tech, language, photography, and plantains.
                         </p>  
@@ -74,7 +72,7 @@ const Home = () => {
                     </div>
                     {/* <div className='tape2'></div> */}
                 </div>
-                            
+ 
                 <div className='scroll_down_container'>
                     <Link href='/' className ='scroll_down animate-arrow-move' to='projects' smooth={true} duration={800}>
                         <span></span>
@@ -86,13 +84,13 @@ const Home = () => {
 
             </section>
             
-            <Suspense>
             {/* <Suspense fallback={<Loader/>}> */}
+            <Suspense>
                 <Projects/>
             </Suspense>
             
-            
-            {/* Divider */} <div className='w-full h-[100px]'></div>
+            {/* Divider */} 
+            <div className='w-full h-[130px]'></div>
 
             <About/>
             

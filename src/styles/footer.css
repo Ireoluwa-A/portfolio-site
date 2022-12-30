@@ -1,6 +1,9 @@
+/* //////////////////////////////////////////////////////////////// */
+/* FOOTER STYLING */
+/* //////////////////////////////////////////////////////////////// */
 .footer_container{
     width: 100%;
-    height: 200px;
+    height: 100px;
     /* background-color: red; */
     display: flex;
     flex-direction: row;
@@ -8,8 +11,7 @@
     justify-content: center;
 }
 .swatch_container{
-    /* position: relative; */
-    width: 900px;
+    width: 100%;
     height: 70%;
     display: flex;
     /* background-color: blue; */
@@ -17,8 +19,8 @@
 .swatch{
     margin: auto;
     padding: auto;
-    width: 270px;
-    height: 55px;
+    width: 260px;
+    height: 50px;
     /* height: 90%; */
     background-color: var(--blue);
     z-index: 1;
@@ -36,10 +38,10 @@
         transform: rotate(0deg);
     }
     10%{
-        transform: rotate(-35deg);
+        transform: rotate(-40deg);
     }
     90%{
-        transform: rotate(-35deg);
+        transform: rotate(-40deg);
     }
     100% {
         transform: rotate(0deg);
@@ -53,7 +55,8 @@
 }
 .swatch p{
     margin: auto;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.7px;
+    /* letter-spacing: 1px; */
 }
 .circle{
     background-color: white;

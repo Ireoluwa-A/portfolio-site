@@ -1,6 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react'
 
-import "../styles/general.css";
+// import "../styles/general.css";
 import "../styles/projects.css";
 
 import {useInView} from 'react-intersection-observer';
@@ -24,13 +24,13 @@ const ProjectBox = (props) => {
             </div>
 
             <div className={`projects_description ${proj.descriptionPos}`}>
-                <h1 className='font-WorkSans text-[25px]'>{proj.title}</h1>
-                <div className='projects_blurb drop-shadow-lg'>
-                    <p className='font-Lato text-[15px] text-[#5e5e5e]'>
+                <h1 className='font-bold font-WorkSans text-[30px]'>{proj.title}</h1>
+                <div className='projects_blurb'>
+                    <p className='font-Nunito text-[15px] text-[#5e5e5e]'>
                         {proj.description}
                     </p>
                 </div>
-                <div className='projects_tech font-Lato text-white'>
+                <div className='projects_tech font-Nunito text-white'>
                     {proj.technology.map((item,index)=>{
                         return(
                             <span key={index}>{item.name}</span>
