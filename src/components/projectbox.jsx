@@ -24,21 +24,21 @@ const ProjectBox = (props) => {
             </div>
 
             <div className={`projects_description ${proj.descriptionPos}`}>
-                <h1 className='font-bold font-WorkSans text-[30px]'>{proj.title}</h1>
+                <h1 className='font-bold font-WorkSans'>{proj.title}</h1>
                 <div className='projects_blurb'>
-                    <p className='font-Nunito text-[15px] text-[#5e5e5e]'>
+                    <p className='font-Nunito'>
                         {proj.description}
                     </p>
                 </div>
-                <div className='projects_tech font-Nunito text-white'>
+                <ul className='projects_tech font-Nunito text-white'>
                     {proj.technology.map((item,index)=>{
                         return(
-                            <span key={index}>{item.name}</span>
+                            <li key={index}>{item.name}</li>
                         )
                     })}
-                </div>
+                </ul>
                 <div className={`projects_link ${proj.linkPos}`}>
-                    <a target="_blank" href={proj.link}><FaGithub></FaGithub></a>
+                    <a target="_blank" href={proj.link}><FaGithub className='w-[18px] h-[18px]'></FaGithub></a>
                 </div>
                 
             </div>

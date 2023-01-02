@@ -15,7 +15,7 @@ import resume from "../assets/resume.pdf";
 
 const Navbar = () => {
     const [nav,setNav] = useState(false)
-    const handleClick = () => setNav(!nav)
+    const toggleNav = () => setNav(!nav)
 
     const [show, setShow] = useState(true)
     // store scrollY to make navbar reappear on scroll up
@@ -25,89 +25,121 @@ const Navbar = () => {
         oldScrollY = window.scrollY
     }
     useEffect(() => {
-        window.addEventListener('scroll',
+        window.addEventListener('scroll', 
         controlNavbar)
         return () => {
             window.removeEventListener('scroll',
             controlNavbar)
         }
     },[])
+    
+    
+    const [lock, setLock] = useState(false);
+    lock?document.body.style.overflow = "hidden":document.body.style.overflow = "auto";
+    // lock?document.getElementById("name").style.filter = "grayscale(100%)":document.getElementById("name").style.filter = 'auto';
+    const toggleScrollLock = () => setLock(!lock);
+    // lock?document.getElementById("#home").style.filter = "blur(1px)":document.getElementById("name").style.filter = 'auto';
+
+    waitForElementToDisplay("home",function(){lock?document.getElementById("home").style.filter = "blur(10px)":document.getElementById("home").style.filter = '';},1000,9000);
+    waitForElementToDisplay("photography",function(){lock?document.getElementById("photography").style.filter = "blur(10px)":document.getElementById("photography").style.filter = '';},1000,9000);
+
+    function waitForElementToDisplay(selector, callback, checkFrequencyInMs, timeoutInMs) {
+    var startTimeInMs = Date.now();
+    (function loopSearch() {
+        if (document.getElementById(selector) != null) {
+        callback();
+        return;
+        }
+        else {
+        setTimeout(function () {
+            if (timeoutInMs && Date.now() - startTimeInMs > timeoutInMs)
+            return;
+            loopSearch();
+        }, checkFrequencyInMs);
+        }
+    })();
+    }
+
+    const handleClick = () => {
+        toggleNav();
+        toggleScrollLock();
+    }
 
     return (
         <header className={`nav-container ${!show && 'nav-container-hidden'}`}>
+
             <div className='logo'>
                 <a href='/'> I A </a>
             </div>
 
             {/* NAV Items */}
-            <div className='nav'>
-                <ul className='hidden md:flex pr-[7vw] text-[14px]'> 
+            {/* <div className='hidden md:flex md:nav'> */}
+                <ul className='hidden md:flex md:nav pr-[7vw] text-[14px]'> 
                     <li>
-                        {/* <a href="/#projects">Projects</a> */}
-                        <Link className='font-WorkSans' to='/#projects' >PROJECTS</Link>
-                        {/* <Link href='/' to='projects' smooth={true} duration={900}>
-                            PROJECTS */}
-                        {/* </Link>  */}
-                    </li>
-                    <li>
-                        <Link className='font-WorkSans' to='/#about'>ABOUT</Link>
-                        {/* <a href="/#projects">Projects</a>
-                        <Link href='/' to='about' smooth={true} duration={900}>
-                            ABOUT
-                            {/* About */}
-                        {/* </Link> */} 
-
+                        <Link className='font-WorkSans' to='/#projects'>
+                            PROJECTS
+                        </Link>
                     </li>
                     <li>
                         <NavLink className='font-WorkSans' to='/photography' activeClassName="active-link">
                             PHOTOGRAPHY
                         </NavLink> 
                     </li>
-
+                    <li>
+                        <Link className='font-WorkSans' to='/#about'>ABOUT</Link>
+                    </li>
                     <li>
                         <a className='font-WorkSans' target="_blank">
                             RESUME
-                            {/* Resume */}
                         </a>
                     </li>
                 </ul>
-            </div>
 
 
-            {/* Mobile menu  */}
-            {/* Hamburger*/}
-            <div onClick={handleClick} className='md:hidden pr-[5%] z-20'>
-                {!nav ? <FaBars /> : <FaTimes />}
-            </div>
-            <ul className={!nav ? 'hidden' : 'nav animate-fade-in-right absolute top-0 z-1 left-0 w-full h-screen bg-[#ece8e3] flex flex-col justify-center items-center'} >
-                <li>
-                    <a href="/">
-                        HOME
-                    </a>
-                </li>
-                <li>
-                    <Link to='/#projects'>PROJECTS</Link>
-                    {/* <Link to='projects' smooth={true} duration={900}>
-                        PROJECTS
-                    </Link> */}
-                </li>
-                <li>
-                    <NavLink to='/photography' activeClassName="active-link">
-                        PHOTOGRAPHY
-                    </NavLink> 
-                </li>
-                <li>
-                    <Link to='/#about'>ABOUT</Link>
-                    {/* <Link to='about' smooth={true} duration={500}>
-                        ABOUT
-                    </Link> */}
-                </li>
-                <li>
-                    <a className='font-bold text-[#A3A86D]' href={resume} target="_blank">
-                        RESUME
-                    </a>
-                </li>
-            </ul>
+            {/* </div> */}
+
+
+            <div onClick={handleClick} 
+                        className='md:hidden pr-[7%] flex z-20'>
+                            {!nav ? <FaBars /> : <FaTimes />}
+                </div>
+
+            {/* <div className='md:hidden flex w-[60%] h-screen'> */}
+
+                <ul className={!nav ? 'nav_mobile_hidden' : 'nav_mobile'} >
+                    <li>
+                        <a href="/">
+                            HOME
+                        </a>
+                    </li>
+                    <li>
+                        <Link onClick={handleClick} to='/#projects'>
+                            PROJECTS
+                        </Link>
+                    </li>
+                    <li>
+                        <NavLink onClick={handleClick} to='/photography'>
+                            PHOTOGRAPHY
+                        </NavLink> 
+                    </li>
+                    <li>
+                        <Link onClick={handleClick} to='/#about'>
+                            ABOUT
+                        </Link>
+                    </li>
+
+                    <li>
+                        <a href={resume} target="_blank">
+                            RESUME
+                        </a>
+                    </li>
+                </ul>
+            
+            {/* </div> */}
+
+
+
+
         </header>
 
         

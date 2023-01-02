@@ -23,15 +23,22 @@
     background-color: var(--cardBackground);
     margin-left: -110px;
     margin-top: -30px;
+
     /* transform: rotate(-20deg); */
     /* box-shadow: 2px 5px 5px 5px rgba(136, 136, 136, 0.5); */
 }
+.intro_card a{
+    cursor: none;
+}
+
 .card_screen{
     background-color: var(--cardScreen);
     margin-top: 10px;
     width: 95%;
     height: 80%;
+    /* cursor: none; */
 }
+
 .intro_title{
     width: 50%;
     height: 600px;
@@ -87,10 +94,9 @@
 /* //////////////////////////////////////////////////////////////// */
 .scroll_down_container{
     position: absolute;
-    top: 78%;
+    top: 80vh;
     left: 0;
     width: 100%;
-    /* height: 100px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -134,7 +140,6 @@
         transform: rotate(45deg) translate(20px,20px);
     }
 }
-
 /* //////////////////////////////////////////////////////////////// */
 /* CUSTOM MOBILE CSS  */
 /* //////////////////////////////////////////////////////////////// */
@@ -170,7 +175,7 @@
 /* CAMERA ANIMATION */
 /* //////////////////////////////////////////////////////////////// */
 .cam_animation{
-    cursor: cell;
+    /* cursor: cell; */
     width: 100%;
     height: 100%;
     display: block;
@@ -179,39 +184,145 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 190% 140%;
+    /* animation-delay: 4s; */
 }
 .cam_animated{
-    animation: camera 1s;
+    animation: 8s camera 2s infinite
+    /* animation-delay: 2s;
+    /* animation: camera 1s; */
+    /* animation-name: camera; */
+    /* animation-duration: 10s; */
 }
 @keyframes camera{
     0%{
         background-image: url('../assets/camera_sequence/01.png');
     }
-    5%{
+    0.5%{
         background-image: url('../assets/camera_sequence/02.png');
     }
-    10%{
+    2%{
         background-image: url('../assets/camera_sequence/03.png');
     }
-    20%{
+    3%{
         background-image: url('../assets/camera_sequence/04.png'); 
     }
-    30%{
+    3.5%{
         background-image: url('../assets/camera_sequence/05.png');
     }
-    50%{
+    4.5%{
         background-image: url('../assets/camera_sequence/09.png');
     }
-    70% {
+    7% {
         background-image: url('../assets/camera_sequence/010.png');
     }
-    80% {
+    10% {
         background-image: url('../assets/camera_sequence/011.png');
     }
-    90% {
+    11% {
         background-image: url('../assets/camera_sequence/012.png');
     }
-    100% { 
+    12% { 
         background-image: url('../assets/camera_sequence/013.png');
     }
+    13%{
+        background-image: url('../assets/camera_sequence/01.png');
+    }
+    100%{
+        background-image: url('../assets/camera_sequence/01.png');
+    }
 }
+
+/* @keyframes camera{
+    0%{
+        background-image: url('../assets/camera_sequence/01.png');
+    }
+    0.5%{
+        background-image: url('../assets/camera_sequence/02.png');
+    }
+    2%{
+        background-image: url('../assets/camera_sequence/03.png');
+    }
+    3%{
+        background-image: url('../assets/camera_sequence/04.png'); 
+    }
+    3.5%{
+        background-image: url('../assets/camera_sequence/05.png');
+    }
+    4.5%{
+        background-image: url('../assets/camera_sequence/09.png');
+    }
+    7% {
+        background-image: url('../assets/camera_sequence/010.png');
+    }
+    10% {
+        background-image: url('../assets/camera_sequence/011.png');
+    }
+    11% {
+        background-image: url('../assets/camera_sequence/012.png');
+    }
+    12% { 
+        background-image: url('../assets/camera_sequence/013.png');
+    }
+    13%{
+        background-image: url('../assets/camera_sequence/01.png');
+    }
+    100%{
+        background-image: url('../assets/camera_sequence/01.png');
+    }
+} */
+
+
+
+/* //////////////////////////////////////////////////////////////// */
+/* CURSOR ANIMATION */
+/* //////////////////////////////////////////////////////////////// */
+.cursor{
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    transition: 0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 
+    0.1s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+    user-select: none;
+    border-radius: 50%; 
+    z-index: 5;
+}
+.cursor_fade{
+    transform: scale(0)
+}
+.cursor_active{
+    pointer-events: none;
+    z-index: 5;
+    transform: scale(4); 
+}
+.cursor::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    display: block;
+    background-image: url('../assets/photos_thumb.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 190% 150%;
+}
+
+/* .cursor::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    display: block;
+    border-radius: 100%;
+    opacity: 0;
+} */
+/* .cursor.active{
+
+} */
+/* .cursor.active::before{
+    opacity: 1;
+} */

@@ -26,7 +26,7 @@ import Img13 from '../assets/gallery/13.jpg';
 const Photography = () => {
 
     let data1 = [
-        {id: 1, imgSrc: Img1, name: 'Constantine Westerink', date: 'April 2021'},
+        {id: 1, imgSrc: Img1, name: 'Constantine Westerink', date: 'August 2021'},
         {id: 2, imgSrc: Img2},
         {id: 7, imgSrc: Img7},
         {id: 10, imgSrc: Img10},
@@ -34,7 +34,7 @@ const Photography = () => {
     ]
     let data2 = [
         {id: 3, imgSrc: Img3, name: 'Tyrece Jeffrey', date: 'October 2022'},
-        {id: 4, imgSrc: Img4, name: 'Josephine Kim', date: 'February 2021'},
+        {id: 4, imgSrc: Img4, name: 'Josephine Kim', date: 'September 2021'},
         {id: 11, imgSrc: Img11},
         {id: 13, imgSrc: Img13, name:'Peach Tree Rascals', date: 'October 2022'}
     ]
@@ -47,7 +47,7 @@ const Photography = () => {
 
 
     return (
-        <div name='photography' className='photography_container'>  
+        <div id='photography' name='photography' className='photography_container'>  
          
             <section className='gallery-wrapper w-full h-screen'>
                 

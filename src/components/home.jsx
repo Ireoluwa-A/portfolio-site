@@ -12,10 +12,30 @@ const Projects = React.lazy(() => import ('./projects'));
 const Home = () => {
 
     // Animated camera
-    const [animated, setAnimated] = useState(false);
+    const [camAnimated, setCamAnimated] = useState(false);
+    const [cursorAnimated, setCursorAnimated] = useState(false);
+
+
+    const [cursorX, setCursorX] = useState();
+    const [cursorY, setCursorY] = useState();
+
+    window.addEventListener('mousemove',(e) => {
+        setCursorX(e.pageX)
+        setCursorY(e.pageY)
+        // console.log(e.pageX,e.pageY)
+    })
+
 
     return (
-        <main name='home' className='w-full h-full pb-[150px]'>
+        <main id='home' name='home' className='w-full h-full pb-[150px]'>
+            <div className={`cursor ${cursorAnimated ? 'cursor_active' : 'cursor_fade'} `}
+                style={{
+                    left: cursorX + 'px',
+                    top: cursorY + 'px'
+                }}
+                >
+            </div>
+
             <section className='intro_section'>
 
                 <div className='intro_title'>
@@ -29,12 +49,21 @@ const Home = () => {
 
                 <div className='intro_card drop-shadow-lg animate-fade_in_right'>
                     {/* <div className='tape1'></div> */}
+
+
                     <div 
                         className='card_screen'
-                        onMouseEnter={() => setAnimated(() => true)}
-                        onAnimationEnd={() => setAnimated(() => false)}
+
+                        onMouseEnter={() => {setCursorAnimated(() => true);
+                                            setCamAnimated(()=>true);
+                                        }}
+                        onMouseLeave = {() => {setCursorAnimated(() => false);
+                           
+                        }}
+                        // onAnimationEnd={() => setCamAnimated(() => false)}
                     >  
-                        <a className={`cam_animation ${animated ? 'cam_animated' : ''} `} href='/#/photography' target="_blank"></a>
+                        {/* <a className={`cam_animation ${camAnimated ? 'cam_animated' : ''} `} href='/#/photography' target="_blank"></a> */}
+                        <a className={`cam_animated  cam_animation`} href='/#/photography' target="_blank"></a>
                     </div>
 
                     <div className='intro_card_content'>
@@ -71,7 +100,7 @@ const Home = () => {
                         
                     </div>
                     {/* <div className='tape2'></div> */}
-                </div>
+                </div> 
  
                 <div className='scroll_down_container'>
                     <Link href='/' className ='scroll_down animate-arrow-move' to='projects' smooth={true} duration={800}>
@@ -90,7 +119,7 @@ const Home = () => {
             </Suspense>
             
             {/* Divider */} 
-            <div className='w-full h-[130px]'></div>
+            <div className='w-full h-[90px]'></div>
 
             <About/>
             

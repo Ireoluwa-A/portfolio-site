@@ -13,7 +13,6 @@ const Projects = () => {
     useEffect(()=> {
         if (location.hash) {
             let elem = document.getElementById(location.hash.slice(1))
-            console.log(elem) 
             if (elem) {
                 elem.scrollIntoView({behavior: "smooth"})
             }
@@ -35,7 +34,7 @@ const Projects = () => {
             description: `To the fans of Civ 6 and Cellular Biology - 
                           an RTS game where you micromanage your cell,
                           produce ATP, perform meitosis, and expand until you conquer the map (porting to unity).`,
-            technology: [{name: 'Python'}, {name: 'CMUGraphics Lib'}, {name: 'Unity'}, {name: 'C#'}],
+            technology: [{name: 'Python'}, {name: 'CMUGraphics'}, {name: 'Unity'}, {name: 'C#'}],
             link: 'https://github.com/Ireoluwa-A/Youkaryote',
             linkPos: 'projects_link_r'
         },
@@ -46,7 +45,7 @@ const Projects = () => {
             imageRight: '',
             title: 'EDE',
             description: `To fellow language lovers, a tool to organize the myriad of resources.`,
-            technology: [{name: 'Javascript'}, {name: 'Flask'}, {name: 'SQL'}, {name: 'HTML & CSS'}],
+            technology: [{name: 'SQL'}, {name: 'Flask'}, {name:'JavaScript (ES6+)' }, {name:'HTML & CSS' }],
             link: 'https://github.com/Ireoluwa-A/EDE', 
             linkPos: 'projects_link_l'
         },
@@ -69,7 +68,7 @@ const Projects = () => {
             title: 'BCNF VISUALIZER',
             description: `Aid other students learning database design visualize breaking
                             an abstract relation into Boys-Codde Normal Form.`,
-            technology: [{name: 'Javascript'}, {name: 'HTML & CSS'}],
+            technology: [{name: 'JavaScript (ES6+)'}, {name: 'HTML & CSS'}],
             link: 'https://github.com/Ireoluwa-A/Youkaryote',
             linkPos: 'projects_link_l'
         }

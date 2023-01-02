@@ -4,6 +4,7 @@ import "../styles/general.css";
 import "../styles/footer.css";
 
 import {FaRegCopyright} from "react-icons/fa";
+import {FaGithub} from 'react-icons/fa';
 
 const Footer = () => {
     const [swatch1Animated, setSwatch1Animated] = useState(false)
@@ -11,8 +12,19 @@ const Footer = () => {
     return (
 
         <footer name='footer' className='footer_container'>
+            <div className='flex flex-row mx-auto tracking-wider' > 
+                <FaRegCopyright className='mt-[2px] w-[15px] h-[15px]'></FaRegCopyright> 
+                <p className='pl-[5px]'>IRE ALARAPE 2022</p>
+            </div>   
+            <div className='flex flex-row mx-auto tracking-wider'> 
+                <div className='footer_link' >
+                    <a className='flex flex-row'target='_blank' href='https://github.com/Ireoluwa-A/portfolio-site'><p>BUILT FROM SCRATCH </p><FaGithub className='w-[15px] mt-[1px] ml-[4px] h-[15px]'></FaGithub></a>
+                </div>
+                
+            </div>
+            
 
-            <div className='swatch_container drop-shadow-lg'
+            {/* <div className='hidden md:flex swatch_container drop-shadow-lg'
             onMouseEnter={() => setSwatch1Animated(() => true)}
             onAnimationEnd={() => setSwatch1Animated(() => false)}
             >
@@ -23,9 +35,9 @@ const Footer = () => {
                 </div>
                 <div className='swatch hidden_swatch'>
                     <div className='circle'></div>
-                    {/* <div> */}
+
                         <p className='text-white font-Nunito text-[15px]'>Irealarape@gmail.com</p>
-                    {/* </div> */}
+      
                    
                 </div>
             </div>
@@ -40,12 +52,11 @@ const Footer = () => {
                 </div>
                 <div className='swatch hidden_swatch flex-row'>
                     <div className='circle'></div>
-                    {/* <div> */}  
                         <p className='text-white mr-[50px] font-Nunito text-[15px] text-left flex '><FaRegCopyright className='text-white mt-[5px] mr-[5px]'></FaRegCopyright>  Ire Alarape 2022</p>
-                    {/* </div> */}
+     
                    
                 </div>
-            </div>
+            </div> */}
 
         </footer>
 
