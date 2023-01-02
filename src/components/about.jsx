@@ -37,12 +37,12 @@ const About = () => {
                         and I enjoy using technology to solve problems.
                     </p>
                     <br></br>
-                    <p>
+                    {/* <p>
                         Born and raised during the ongoing tech boom of Lagos, Nigeria, and surrounded by the 
                         diversity of the region, I've always loved technology and have been
                         Now I harness this passion to learn
-                    </p>
-                    <br></br>
+                    </p> */}
+                    {/* <br></br> */}
                     <p>
                         You can usually find me practicing the piano/guitar, 
                         playing basketball or coaxing my friends to do photoshoots 
