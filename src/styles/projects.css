@@ -225,10 +225,10 @@
 .ede_bg{
     background-image: url('../assets/EDE.jpg');
 }
-
 .sentimental_bg{
     background-color: grey;
 }
 .bcnf_bg{
-    background-image: url('../assets/database.jpg');
+    /* background-image: url('../assets/database.jpg'); */
+    background-image: url('../assets/construction.png');
 }

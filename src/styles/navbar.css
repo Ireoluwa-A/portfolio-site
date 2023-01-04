@@ -38,10 +38,11 @@
     font-size: 20px;
     cursor: pointer;
 }
-.nav a{
-    position: relative
+
+.nav_link{
+    position: relative;
 }
-.nav a:after {
+.nav_link:after{
     content: "";
     position: absolute;
     background-color: var(--secondaryColor);
@@ -50,11 +51,12 @@
     left: 0;
     bottom: 5px;
     bottom: -3px;
-    transition: 0.3s;
+    transition: 0.3s; 
 }
-.nav a:hover:after {
+.nav_link:hover:after{
     width: 100%;
 }
+
 .active{
     font-weight: bold;
     color: var(--secondaryColor);

@@ -61,14 +61,14 @@ const Projects = () => {
             linkPos: 'hide'
         },
         {
-            background: 'default_bg',
+            background: 'bcnf_bg',
             descriptionPos:'projects_description_l',
             imageLeft: 'hidden',
             imageRight: '',
             title: 'BCNF VISUALIZER',
             description: `Aid other students learning database design visualize breaking
                             an abstract relation into Boys-Codde Normal Form.`,
-            technology: [{name: 'JavaScript (ES6+)'}, {name: 'HTML & CSS'}],
+            technology: [{name: 'React'},{name: 'JavaScript (ES6+)'}, {name: 'HTML & CSS'}],
             link: 'https://github.com/Ireoluwa-A/Youkaryote',
             linkPos: 'projects_link_l'
         }

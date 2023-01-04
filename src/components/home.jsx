@@ -27,7 +27,7 @@ const Home = () => {
 
 
     return (
-        <main id='home' name='home' className='w-full h-full pb-[150px]'>
+        <main id='home' name='home' className='w-full h-full'>
             <div className={`cursor ${cursorAnimated ? 'cursor_active' : 'cursor_fade'} `}
                 style={{
                     left: cursorX + 'px',

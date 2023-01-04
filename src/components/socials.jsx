@@ -14,7 +14,7 @@ const Socials = () => {
             <div className='socials_container' >
                 <a className='social_btn' target="_blank" href='https://github.com/Ireoluwa-A'><FaGithub className='social_icon'></FaGithub></a>
                 <a target="_blank"  href='https://www.linkedin.com/in/ire-alarape/'><FaLinkedinIn className='social_icon'></FaLinkedinIn></a>
-                <a target="_blank"  href='https://github.com/Ireoluwa-A'><FaInstagram className='social_icon'></FaInstagram></a>
+                <a target="_blank" ><FaInstagram className='social_icon'></FaInstagram></a>
                 <a target="_blank"  href='mailto:irealarape@gmail.com'><HiOutlineMail className='social_icon'></HiOutlineMail></a>
                 <div className='socials_line'></div>
                 {/* <img className='leaves'src={leaves}/> */}

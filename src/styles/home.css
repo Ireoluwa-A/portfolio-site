@@ -23,7 +23,6 @@
     background-color: var(--cardBackground);
     margin-left: -110px;
     margin-top: -30px;
-
     /* transform: rotate(-20deg); */
     /* box-shadow: 2px 5px 5px 5px rgba(136, 136, 136, 0.5); */
 }
@@ -167,7 +166,6 @@
     .scroll_down_container{
         position: absolute;
         top: 84%;
-
     }
 }
 
