@@ -178,10 +178,11 @@
     height: 100%;
     display: block;
     margin-top: 5%;
-    background-image: url('../assets/camera_sequence/01.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 190% 140%;
+    background-image: url('../assets/camera_sequence/01.png');
+
     /* animation-delay: 4s; */
 }
 .cam_animated{

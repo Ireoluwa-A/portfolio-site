@@ -25,7 +25,6 @@ const Home = () => {
         // console.log(e.pageX,e.pageY)
     })
 
-
     return (
         <main id='home' name='home' className='w-full h-full'>
             <div className={`cursor ${cursorAnimated ? 'cursor_active' : 'cursor_fade'} `}
@@ -50,7 +49,6 @@ const Home = () => {
                 <div className='intro_card drop-shadow-lg animate-fade_in_right'>
                     {/* <div className='tape1'></div> */}
 
-
                     <div 
                         className='card_screen'
 
@@ -63,6 +61,7 @@ const Home = () => {
                         // onAnimationEnd={() => setCamAnimated(() => false)}
                     >  
                         {/* <a className={`cam_animation ${camAnimated ? 'cam_animated' : ''} `} href='/#/photography' target="_blank"></a> */}
+                            
                         <a className={`cam_animated  cam_animation`} href='/#/photography' target="_blank"></a>
                     </div>
 

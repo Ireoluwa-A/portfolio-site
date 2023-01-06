@@ -9,21 +9,17 @@
     --brown: #c89967;
     --offWhite: #ece8e3;
 
-
     --backgroundColor: #ececec;
     --socialsColor: rgb(68, 68, 68);
+    --secondaryColor: var(--blue);
     --secondaryColor2: #B78B9D;
     --secondaryColor3: rgb(210, 199, 199);
-    --secondaryColor: var(--blue);
 
-    
     /* CARD VARIABLES */
     --cardBackground: white;
     --cardScreen: var(--blue);
     --card_width: 350px;
     --card_height: 370px;
-
-
 }
 
 .divider{

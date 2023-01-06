@@ -58,8 +58,9 @@ const About = () => {
                     </p>
                     <br></br>
                     <p>
-                        Born and raised during the ongoing tech boom of Lagos, Nigeria.
-                        Now I harness this passion to learn everything and anything I can.
+                        Born and raised during the ongoing tech boom of Lagos, Nigeria, I was exposed to computers
+                        from an early age, and loved using them to make everything from Scratch Games to animations and videos.
+                        I've maintained this passion and curiosity, and love learning everything and anything I can.
                     </p>
                     <br></br>
                     <p>
