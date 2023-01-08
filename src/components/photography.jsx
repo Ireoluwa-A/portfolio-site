@@ -45,7 +45,7 @@ const Photography = () => {
         {id: 12, imgSrc: Img12, name: 'CMU', date: 'October 2022'}
     ]
 
-
+    
     return (
         <div id='photography' name='photography' className='photography_container'>  
          

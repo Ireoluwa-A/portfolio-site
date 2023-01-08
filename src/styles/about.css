@@ -123,6 +123,10 @@
 
 /* MOBILE RESPONSIVE */
 @media only screen and (max-width: 768px){
+    .about_container{
+        height: 600px;
+
+    }
     .about_body{
         flex-direction: column;
         /* height: 50%; */
@@ -139,7 +143,6 @@
         /* margin: 10px; */
     }
 }
-
 
 
 /* SPECIAL EFFECTS */

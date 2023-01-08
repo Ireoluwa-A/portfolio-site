@@ -22,7 +22,6 @@ const Home = () => {
     window.addEventListener('mousemove',(e) => {
         setCursorX(e.pageX)
         setCursorY(e.pageY)
-        // console.log(e.pageX,e.pageY)
     })
 
     return (

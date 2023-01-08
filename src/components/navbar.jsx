@@ -25,13 +25,13 @@ const Navbar = () => {
         setShow(((window.scrollY <= 400)) || (oldScrollY > window.scrollY))
         oldScrollY = window.scrollY
     }
+
     useEffect(() => {
-        window.addEventListener('scroll', 
-        controlNavbar)
-        return () => {
-            window.removeEventListener('scroll',
-            controlNavbar)
-        }
+        window.addEventListener('scroll', controlNavbar)
+        // return () => {
+        //     window.removeEventListener('scroll',
+        //     controlNavbar)
+        // }
     },[])
 
     const [lock, setLock] = useState(false);

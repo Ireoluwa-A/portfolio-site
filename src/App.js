@@ -12,22 +12,19 @@ import {Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
-      <React.Fragment>
-
-        <React.Fragment>
-          <Navbar/>
-          <Socials/>
-        </React.Fragment>
-        
+      <>
+        <Navbar/>
+        <Socials/>
+      
         <Routes>  
           <Route exact path="/" element={<Home/>}/>
           <Route path='/photography' element={<Photography/>}/>
         </Routes>
 
         <Footer/>
-        
-      </React.Fragment>
+      </>
   );
 }
 
 export default App;
+
