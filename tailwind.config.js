@@ -19,7 +19,7 @@ module.exports = {
     animation:{
       spin: 'spin 6s linear infinite',
       // fade_in_left: 'fade_in_left 1.3s',
-      fade_in_left: 'fade_in_left 0.7s',
+      fade_in_left: 'fade_in_left 0.6s',
       fade_in_right: 'fade_in_right 0.8s',
       enlarge: 'enlarge .3s ease',
     },

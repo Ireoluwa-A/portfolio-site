@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import {useInView} from 'react-intersection-observer';
-import { useLocation } from 'react-router-dom';
+
+
+
+import { useScrollLocation } from '../helper';
 
 import About_Icon from './about_icon';
 
@@ -8,18 +11,7 @@ import "../styles/about.css";
 
 const About = () => {
     const {ref: aboutHeader, inView: aboutHeaderVisible, entry} = useInView()
-    
-    const location = useLocation()
-    useEffect(()=> {
-        if (location.hash) {
-            let elem = document.getElementById(location.hash.slice(1))
-            if (elem) {
-                elem.scrollIntoView({behavior: "smooth"})
-            }
-        } else {
-        window.scrollTo({top:0,left:0, behavior: "smooth"})
-        }
-    }, [location,])
+    const location = useScrollLocation()
 
     
     const about_icons = [

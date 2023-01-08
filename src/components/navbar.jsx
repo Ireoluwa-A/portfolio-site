@@ -28,10 +28,10 @@ const Navbar = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', controlNavbar)
-        // return () => {
-        //     window.removeEventListener('scroll',
-        //     controlNavbar)
-        // }
+        return () => {
+            window.removeEventListener('scroll',
+            controlNavbar)
+        }
     },[])
 
     const [lock, setLock] = useState(false);

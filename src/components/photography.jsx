@@ -1,11 +1,13 @@
 import React from 'react'
 
+import LazyImg from './lazyimg'
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import "../styles/photography.css";
 
+// import placeholder from '../assets/gallery/placeholder.jpg'
 // import GALLERY from '../assets/gallery/gallery.js';
 import Img1 from '../assets/gallery/1.jpg';
 import Img2 from '../assets/gallery/2.jpg';
@@ -21,12 +23,10 @@ import Img11 from '../assets/gallery/11.jpg';
 import Img12 from '../assets/gallery/12.jpg';
 import Img13 from '../assets/gallery/13.jpg';
 
-
-
 const Photography = () => {
 
     let data1 = [
-        {id: 1, imgSrc: Img1, name: 'Constantine Westerink', date: 'August 2021'},
+        {id: 1, imgSrc: Img1, name: 'Constantine Westerink', date: 'August 2021', width: '200', height: '500'},
         {id: 2, imgSrc: Img2},
         {id: 7, imgSrc: Img7},
         {id: 10, imgSrc: Img10},
@@ -45,7 +45,7 @@ const Photography = () => {
         {id: 12, imgSrc: Img12, name: 'CMU', date: 'October 2022'}
     ]
 
-    
+
     return (
         <div id='photography' name='photography' className='photography_container'>  
          
@@ -57,43 +57,46 @@ const Photography = () => {
                     <div className='w-full h-full gallery-content animate-fade_in_right'>
                         <div className="flex flex-col md:flex-row justify-between animate-fade_in_right">
                             <div className="dream w-full md:w-[32.5%]">
-                                {data1.map((item,index)=>{
+                                {data1.map((imgInfo,index)=>{
                                 return(
                                     <div key={index} className='gallery-box'>
-                                        <LazyLoadImage effect="blur" src={item.imgSrc}/> 
-                                        <div className='gallery-description'>
-                                            <h2>{item.name}</h2>
-                                            <h3>{item.date}</h3>
-                                        </div>
-                                    </div>
+                                        {/* <LazyLoadImage height='auto' width='60vw' src={imgInfo.imgSrc} effect='blur'/> */}
+                                        <LazyImg imgInfo={imgInfo}/>
+                                    <div className='gallery-description'>
+                                    <h2>{imgInfo.name}</h2>
+                                    <h3>{imgInfo.date}</h3>
+                                </div>
+                            </div>
                                 ) 
                                 })}
                             </div>
                             <div className="dream w-full md:w-[32.5%]">
-                                {data2.map((item,index)=>{
-                                return(
-                                    <div key={index} className='gallery-box'>
-                                        <LazyLoadImage effect="blur"  src={item.imgSrc}/> 
+                                {data2.map((imgInfo,index)=>{
+                                    return(
+                                        <div key={index} className='gallery-box'>
+                                            {/* <LazyLoadImage height='auto' width='60vw' src={imgInfo.imgSrc} effect='blur'/> */}
+                                            <LazyImg imgInfo={imgInfo}/>
                                         <div className='gallery-description'>
-                                            <h2>{item.name}</h2>
-                                            <h3>{item.date}</h3>
-                                        </div>
+                                        <h2>{imgInfo.name}</h2>
+                                        <h3>{imgInfo.date}</h3>
                                     </div>
-                                )
+                                </div>
+                                    ) 
                                 })}
                             </div>
                             <div className="dream w-full md:w-[32.5%]">
-                                {data3.map((item,index)=>{
-                                return(
-                                    <div key={index} className='gallery-box'>
-                                        <LazyLoadImage effect="blur" src={item.imgSrc}/> 
+                                {data3.map((imgInfo,index)=>{
+                                    return(
+                                        <div key={index} className='gallery-box'>
+                                            {/* <LazyLoadImage height='auto' width='60vw' src={imgInfo.imgSrc} effect='blur'/> */}
+                                            <LazyImg imgInfo={imgInfo}/>
                                         <div className='gallery-description'>
-                                            <h2>{item.name}</h2>
-                                            <h3>{item.date}</h3>
-                                        </div>
-                                    </div>  
-                                )
-                                })}
+                                        <h2>{imgInfo.name}</h2>
+                                        <h3>{imgInfo.date}</h3>
+                                    </div>
+                                </div>
+                                    ) 
+                                    })}
                             </div>
                          </div>
                 </div> 

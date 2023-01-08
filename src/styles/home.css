@@ -187,7 +187,7 @@
     /* animation-delay: 4s; */
 }
 .cam_animated{
-    animation: 8s camera 2s infinite
+    animation: 8s camera -0.1s infinite
     /* animation-delay: 2s;
     /* animation: camera 1s; */
     /* animation-name: camera; */
