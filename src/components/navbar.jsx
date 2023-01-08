@@ -40,7 +40,7 @@ const Navbar = () => {
         setTimeout(() => {
             setShow(true)
             }, 400)
-    })
+    },[])
 
     const [lock, setLock] = useState(false);
     lock?document.body.style.overflow = "hidden":document.body.style.overflow = "auto";

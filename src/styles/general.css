@@ -120,6 +120,7 @@
 
 /* PRELOAD IMAGES USING CSS */
 /* Find better way with JS */
+/* https://stackoverflow.com/questions/1373142/preloading-css-images */
 .loading_box:after{
     position: absolute; width: 0; height: 0;
     overflow: hidden;
