@@ -25,6 +25,18 @@ function App() {
 
   loading?document.body.style.overflow = "hidden":document.body.style.overflow = "auto";
   return (
+      // <>
+      //   <Navbar/>
+      //   <Socials/>
+      
+      //   <Routes>  
+      //     <Route exact path="/" element={<Home/>}/>
+      //     <Route path='/photography' element={<Photography/>}/>
+      //   </Routes>
+
+      //   <Footer/>
+      // </>
+
       <>{loading ? <Loader/> : 
         <>
           <Navbar/>

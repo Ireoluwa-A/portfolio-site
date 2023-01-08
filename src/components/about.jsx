@@ -51,13 +51,13 @@ const About = () => {
                     <br></br>
                     <p>
                         Born and raised during the ongoing tech boom of Lagos, Nigeria, I was exposed to computers
-                        from an early age, and loved using them to make everything from Scratch Games to animations and videos.
+                        from an early age and loved using them to make everything from Scratch Games to animations and videos.
                         I've maintained this passion and curiosity, and love learning everything and anything I can.
                     </p>
                     <br></br>
                     <p>
                         You can usually find me practicing the piano/guitar, 
-                        playing basketball or coaxing my friends to do photoshoots 
+                        playing basketball, or coaxing my friends to do photoshoots 
                         (with me behind the camera of course).
                     </p>
                 </div>
