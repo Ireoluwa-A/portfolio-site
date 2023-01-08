@@ -12,7 +12,13 @@
     align-items: center;
     color: var(--socialsColor);
     z-index: 3;
+    opacity: 1;
+    transition: 0.9s;
 }
+.socials_container_hidden{
+    opacity: 0;
+}
+
 .socials_container a{
     padding: 7px;
     transition: 0.3s;

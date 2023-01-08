@@ -61,7 +61,7 @@ const Home = () => {
                     >  
                         {/* <a className={`cam_animation ${camAnimated ? 'cam_animated' : ''} `} href='/#/photography' target="_blank"></a> */}
                             
-                        <a className={`cam_animated  cam_animation`} href='/#/photography' target="_blank"></a>
+                        <a className={`cam_animated cam_animation`} href='/#/photography' target="_blank"></a>
                     </div>
 
                     <div className='intro_card_content'>

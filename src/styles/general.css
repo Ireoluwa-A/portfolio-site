@@ -20,6 +20,12 @@
     --cardScreen: var(--blue);
     --card_width: 350px;
     --card_height: 370px;
+
+    /* ANIMATION TIMES */
+    --loadingAnimationLength: 5s;
+
+    --camAnimationDelay: 2.5s; 
+    --camAnimationLength: 8s;
 }
 
 .divider{
@@ -53,4 +59,80 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+
+/* LOADING STUFF */
+/* Fill animation learned from: */
+/* Codingflag channel */
+/* https://www.youtube.com/watch?v=wGPDuqgkoew&ab_channel=Codingflag */
+.loading_container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 12;
+    background-color: var(--backgroundColor);
+    animation: popout 1s 1.9s;
+}
+@keyframes popout{
+    10%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.25);
+    }
+    60%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+.loading_box{
+    width: 70px;
+    height: 70px;
+    border: 7px solid white;
+    position: relative;
+    overflow: hidden; 
+}
+.loading_box:before{
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: var(--blue);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 40%;
+    animation: fill var(--loadingAnimationLength) ease-in-out;
+}
+
+@keyframes fill{
+    from {
+        top: 70px;
+        transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+        top: -50px;
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+/* PRELOAD IMAGES USING CSS */
+/* Find better way with JS */
+.loading_box:after{
+    position: absolute; width: 0; height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: 
+    url('../assets/camera_sequence/01.png')
+    url('../assets/camera_sequence/02.png')
+    url('../assets/camera_sequence/03.png')
+    url('../assets/camera_sequence/04.png')
+    url('../assets/camera_sequence/05.png')
+    url('../assets/camera_sequence/09.png')
+    url('../assets/camera_sequence/010.png')
+    url('../assets/camera_sequence/011.png')
+    url('../assets/camera_sequence/012.png')
+    url('../assets/camera_sequence/013.png')
 }

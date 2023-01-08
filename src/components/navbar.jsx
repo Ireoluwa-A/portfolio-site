@@ -18,13 +18,14 @@ const Navbar = () => {
     const [nav,setNav] = useState(false)
     const toggleNav = () => setNav(!nav)
 
-    const [show, setShow] = useState(true)
+    const [show, setShow] = useState(false)
     // store scrollY to make navbar reappear on scroll up
     var oldScrollY = window.scrollY;
     const controlNavbar = () => {
         setShow(((window.scrollY <= 400)) || (oldScrollY > window.scrollY))
         oldScrollY = window.scrollY
     }
+
 
     useEffect(() => {
         window.addEventListener('scroll', controlNavbar)
@@ -33,6 +34,13 @@ const Navbar = () => {
             controlNavbar)
         }
     },[])
+
+    // Delay loading animation
+    useEffect(() => {
+        setTimeout(() => {
+            setShow(true)
+            }, 400)
+    })
 
     const [lock, setLock] = useState(false);
     lock?document.body.style.overflow = "hidden":document.body.style.overflow = "auto";
