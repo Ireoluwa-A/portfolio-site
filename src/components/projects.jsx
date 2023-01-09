@@ -1,12 +1,7 @@
 import React, {useRef, useEffect, useState} from 'react'
-
-
-import { useLocation } from 'react-router-dom';
-
-
-
-import { useScrollLocation } from '../helper';
 import {useInView} from 'react-intersection-observer';
+
+import {useScrollLocation}  from '../helper';
 
 import ProjectBox from './projectbox';
 
@@ -16,7 +11,11 @@ import "../styles/projects.css";
 const Projects = () => {
     const location = useScrollLocation()
 
-    const {ref: projectHeader, inView: projectHeaderVisible, entry} = useInView()
+    const {ref: projectHeader, inView: projectHeaderVisible, entry} = useInView({
+        threshold: 0.4,
+        triggerOnce: true
+    })
+    
     const projBoxes = [
         // List of featured projects and their information
         // Passed as prop to PorjectBox Component
@@ -69,17 +68,12 @@ const Projects = () => {
         }
     ];
 
-    function scrollingFromAbove(entry){
-        return entry.boundingClientRect.y >= entry.rootBounds.y;
-    }
-    
     return (
         <section id='projects' name='projects' className='projects_container'>
             {/* Title */}
             <div ref={projectHeader} 
-                className={`projects_header 
-                            ${projectHeaderVisible && scrollingFromAbove(entry) ? 
-                             'animate-fade_in_left' : ''}`} >
+                className={`projects_header fade_in_left
+                            ${projectHeaderVisible ? 'fade_in_appear' : ''}`} >
                 <h1 className='text-3xl tracking-wider font-bold font-WorkSans'>MY</h1>
                 <h1 className='text-4xl tracking-wider font-bold font-WorkSans'>PROJECTS</h1>
                 <div className='divider'></div>
@@ -90,7 +84,7 @@ const Projects = () => {
             <div className='projects_body'>
                 {projBoxes.map((proj,index)=>{
                     return(
-                        <ProjectBox key={index} proj={proj} scrollingFunc={scrollingFromAbove}/>
+                        <ProjectBox key={index} proj={proj} />
                     )})
                 }
             </div>

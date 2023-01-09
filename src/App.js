@@ -2,6 +2,9 @@ import './styles/App.css';
 
 import React, {useState, useEffect} from 'react';
 
+import {useFuncDelay, useLockScroll} from './helper'
+
+
 import Navbar from './components/navbar';
 import Socials from './components/socials';
 import Footer from './components/footer';
@@ -16,27 +19,9 @@ import Loader from './components/loader';
 function App() {
 
   const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-      setTimeout(() => {
-      setLoading(false)
-      }, 3000)
-  }, [])
-
-  loading?document.body.style.overflow = "hidden":document.body.style.overflow = "auto";
+  useFuncDelay(setLoading, false, 3000)
+  useLockScroll(loading)
   return (
-      // <>
-      //   <Navbar/>
-      //   <Socials/>
-      
-      //   <Routes>  
-      //     <Route exact path="/" element={<Home/>}/>
-      //     <Route path='/photography' element={<Photography/>}/>
-      //   </Routes>
-
-      //   <Footer/>
-      // </>
-
       <>{loading ? <Loader/> : 
         <>
           <Navbar/>

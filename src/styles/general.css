@@ -43,22 +43,22 @@
 .hide >*{
     display: none;
 }
-.spinner{
-    height: 120px;
-    width: 120px;
-    border: 6px solid;
-    border-color: white solid white solid;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    /* background-color: red; */
+
+/* PAGE ANIMATIONS */
+.fade_in_left{
+    opacity: 0;
+    transition: 0.6s;
+    transform: translateX(-50px);
 }
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.fade_in_up{
+    opacity: 0;
+    transition: 0.6s;
+    transform: translateY(40px);
+}
+.fade_in_appear{
+    opacity: 1;
+    transform: translateY(0);
+    transform: translateX(0);
 }
 
 
@@ -72,16 +72,16 @@
     top: 0;
     z-index: 12;
     background-color: var(--backgroundColor);
-    animation: popout 1s 1.9s;
+    animation: popout 1.5s 2.4s;
 }
 @keyframes popout{
     10%{
         transform: scale(1);
     }
-    50%{
+    20%{
         transform: scale(1.25);
     }
-    60%{
+    30%{
         transform: scale(0);
     }
     100%{
@@ -106,7 +106,6 @@
     border-radius: 40%;
     animation: fill var(--loadingAnimationLength) ease-in-out;
 }
-
 @keyframes fill{
     from {
         top: 70px;
@@ -126,6 +125,8 @@
     /* overflow: hidden; */
     z-index: -1;
     content: 
+
+    /* Animation pictures */
     url('../assets/camera_sequence/01.png')
     url('../assets/camera_sequence/02.png')
     url('../assets/camera_sequence/03.png')
@@ -137,5 +138,34 @@
     url('../assets/camera_sequence/012.png')
     url('../assets/camera_sequence/013.png')
 
+    /* Projects pictures */
+    url('../assets/youkaryote.jpg')
+    url('../assets/youkaryote2.jpg')
+    url('../assets/c0vm.jpg')
+    url('../assets/EDE.jpg')
+    url('../assets/construction.png')
 
+}
+
+
+
+
+
+
+.spinner{
+    height: 400px;
+    width: 120px;
+    border: 5px solid;
+    border-color: white solid white solid;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    /* background-color: red; */
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

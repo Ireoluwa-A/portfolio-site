@@ -13,7 +13,7 @@ const Socials = () => {
     useEffect(() => {
         setTimeout(() => {
             setShow(true)
-            }, 700)
+            }, 800)
         })
         
     return (

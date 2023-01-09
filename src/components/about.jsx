@@ -2,15 +2,23 @@ import React, {useState, useEffect} from 'react'
 import {useInView} from 'react-intersection-observer';
 
 
-
 import { useScrollLocation } from '../helper';
 
 import About_Icon from './about_icon';
 
+// import "../styles/about.css";
 import "../styles/about.css";
 
 const About = () => {
-    const {ref: aboutHeader, inView: aboutHeaderVisible, entry} = useInView()
+    
+    const {ref: aboutHeader, inView: aboutHeaderVisible, entry} = useInView({
+        threshold: 0,
+        triggerOnce: true
+    })
+    const {ref: aboutBody, inView: aboutBodyVisible, entryBody} = useInView({
+        threshold: 0,
+        triggerOnce: true
+    })
     const location = useScrollLocation()
 
     
@@ -34,14 +42,15 @@ const About = () => {
         flag: 'ALG_flag'
         }
     ]
+
     return (
         <section id='about' name='about' className='about_container'>
             {/* Title */}
-            <div ref={aboutHeader} className={`about_header ${aboutHeaderVisible && (entry.boundingClientRect.y >= entry.rootBounds.y)? 'animate-fade_in_left' : ''}`} >
+            <div ref={aboutHeader} className={`about_header fade_in_left ${aboutHeaderVisible ? 'fade_in_appear' : ''}`} >
                 <h1 className='text-3xl tracking-wider font-bold font-WorkSans'>ABOUT</h1>
                 <div className='divider'></div>
             </div>
-            <div className='about_body'>
+            <div ref={aboutBody} className={`about_body fade_in_up ${aboutBodyVisible ? 'fade_in_appear' : ''}`}>
 
                 <div className='about_description font-WorkSans'>
                     <p>
@@ -61,6 +70,8 @@ const About = () => {
                         (with me behind the camera of course).
                     </p>
                 </div>
+                
+            </div>
 
                 {/* <div className='about_options'> */}
                 {/* {about_icons.map((about_icon,index)=>{
@@ -83,7 +94,7 @@ const About = () => {
                     </div> */}
                 
  
-            </div>
+            
         </section>
     )
 }

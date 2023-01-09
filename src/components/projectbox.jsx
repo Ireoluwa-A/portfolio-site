@@ -1,27 +1,26 @@
 import React, {useState, useRef, useEffect} from 'react'
+import {useInView} from 'react-intersection-observer';
 
 // import "../styles/general.css";
 import "../styles/projects.css";
-
-import {useInView} from 'react-intersection-observer';
 
 import {FaGithub} from 'react-icons/fa';
 
 
 const ProjectBox = (props) => {
     const proj = props.proj;
-    const scrollingFromAbove = props.scrollingFunc;
 
-    const {ref: projRef, inView: projVisible, entry} = useInView()
+    const {ref: projRef, inView: projVisible, entry} = useInView({
+        threshold: 0.4,
+        triggerOnce: true
+    })
 
     return (
         <div ref={projRef} 
-            className={`projects_box  
-            ${projVisible && (scrollingFromAbove(entry)) ?
-             'animate-fade_in_left' : ''}`}
+            className={`projects_box fade_in_up
+            ${projVisible ? 'fade_in_appear' : ''}`}
         >
-            <div className={`${proj.imageLeft} projects_image proj_bg ${proj.background}`}>
-            </div>
+            <div className={`${proj.imageLeft} projects_image proj_bg ${proj.background}`}></div>
 
             <div className={`projects_description ${proj.descriptionPos}`}>
                 <h1 className='font-bold font-WorkSans'>{proj.title}</h1>
@@ -38,7 +37,9 @@ const ProjectBox = (props) => {
                     })}
                 </ul>
                 <div className={`projects_link ${proj.linkPos}`}>
-                    <a target="_blank" href={proj.link}><FaGithub className='w-[18px] h-[18px]'></FaGithub></a>
+                    <a target="_blank" href={proj.link}>
+                        <FaGithub className='w-[18px] h-[18px]'></FaGithub>
+                    </a>
                 </div>
                 
             </div>

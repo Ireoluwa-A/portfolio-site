@@ -9,7 +9,6 @@ import App from './App';
 import { useLayoutEffect, useRef, useState } from "react";
 import {HashRouter as Router} from 'react-router-dom';
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(

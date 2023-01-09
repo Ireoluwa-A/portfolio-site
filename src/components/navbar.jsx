@@ -1,32 +1,30 @@
 import React, {useState, useEffect} from 'react'
-import {FaBars, FaTimes} from 'react-icons/fa';
-
-
-import {NavLink} from "react-router-dom";
-import {Link} from "react-router-dom";
-
-// Helper functions
-import {waitForElementToDisplay} from '../helper';
+import {NavLink, Link} from "react-router-dom";
+import {waitForElementToDisplay, useFuncDelay, useLockScroll} from '../helper';
 
 import "../styles/navbar.css";
 
 import resume from "../assets/resume.pdf";
+import {FaBars, FaTimes} from 'react-icons/fa';
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 
 
 const Navbar = () => {
+    // Mobile vs desktop
     const [nav,setNav] = useState(false)
     const toggleNav = () => setNav(!nav)
 
+    // Hidden vs shown
     const [show, setShow] = useState(false)
+    // Delay loading animation
+    useFuncDelay(setShow, true, 400);
+
     // store scrollY to make navbar reappear on scroll up
     var oldScrollY = window.scrollY;
     const controlNavbar = () => {
         setShow(((window.scrollY <= 400)) || (oldScrollY > window.scrollY))
         oldScrollY = window.scrollY
     }
-
-
     useEffect(() => {
         window.addEventListener('scroll', controlNavbar)
         return () => {
@@ -35,20 +33,25 @@ const Navbar = () => {
         }
     },[])
 
-    // Delay loading animation
-    useEffect(() => {
-        setTimeout(() => {
-            setShow(true)
-            }, 400)
-    },[])
-
+    // Lock navbar + blur when locked
     const [lock, setLock] = useState(false);
-    lock?document.body.style.overflow = "hidden":document.body.style.overflow = "auto";
-
     const toggleScrollLock = () => setLock(!lock);
+    useLockScroll(lock)
+
     // Wait for main page element to exist so we can blur it
-    waitForElementToDisplay("home",function(){lock?document.getElementById("home").style.filter = "blur(10px)":document.getElementById("home").style.filter = '';},1000,9000);
-    waitForElementToDisplay("photography",function(){lock?document.getElementById("photography").style.filter = "blur(10px)":document.getElementById("photography").style.filter = '';},1000,9000);
+    function blurHome()
+                {lock ?
+                     document.getElementById("home").style.filter = "blur(10px)":
+                     document.getElementById("home").style.filter = '';}
+            
+    function blurPhotography(){
+                        lock?
+                            document.getElementById("photography").style.filter = "blur(10px)":
+                            document.getElementById("photography").style.filter = '';
+                        }
+    waitForElementToDisplay("home",blurHome,1000,9000);
+    waitForElementToDisplay("photography",blurPhotography,1000,9000);
+
 
     const handleClick = () => {
         toggleNav();

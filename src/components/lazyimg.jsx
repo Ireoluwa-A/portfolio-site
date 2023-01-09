@@ -11,7 +11,7 @@ const LazyImg = (props) => {
   const imgInfo = props.imgInfo
   const [ placeholderRef, inView ] = useInView({
         triggerOnce: true,
-    fallbackInView: true,
+        fallbackInView: true,
   });
 
   return (
