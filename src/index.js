@@ -7,7 +7,9 @@ import App from './App';
 
 // import {BrowserRouter as Router} from 'react-router-dom'
 import { useLayoutEffect, useRef, useState } from "react";
-import {HashRouter as Router} from 'react-router-dom';
+// import {HashRouter as Router} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
