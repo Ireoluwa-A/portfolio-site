@@ -1,19 +1,20 @@
 import React, {useState, useEffect, useRef, Suspense} from 'react'
 import {Link} from 'react-scroll' 
 
-import "../styles/home.css";
+import "../../styles/home.css";
 
-import {detectBrowser} from '../helper';
+import {detectBrowser} from '../../utils/helper';
 
-import Spinner from './spinner';
+import Spinner from '../../components/spinner';
 import Card from './card';
-import About from './about';
+import About from '../photography/about';
 const Projects = React.lazy(() => import ('./projects'));
 
 const Home = () => {
     const browser = detectBrowser()
     
     return (
+
         <main id='home' name='home' className='w-full h-full'>
             <section className='intro_section'>
 
@@ -26,7 +27,7 @@ const Home = () => {
                     </h1>
                 </div>
 
-                <Card browser={browser} />
+                <Card browser={browser}/>
 
                 <div className='scroll_down_container'>
                     <Link href='/' className ='scroll_down animate-arrow-move' to='projects' smooth={true} duration={800}>
@@ -44,7 +45,7 @@ const Home = () => {
             </Suspense>
             
             {/* Divider */} 
-            <div className='w-full h-[130px]'></div>
+            <div className='w-full h-[170px]'></div>
 
             <About/>
             

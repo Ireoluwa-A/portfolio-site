@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {NavLink, Link} from "react-router-dom";
-import {waitForElementToDisplay, useFuncDelay, useLockScroll} from '../helper';
+
+import {waitForElementToDisplay, useFuncDelay, useLockScroll} from '../utils/helper';
 
 import "../styles/navbar.css";
 

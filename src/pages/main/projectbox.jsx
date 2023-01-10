@@ -2,13 +2,12 @@ import React, {useState, useRef, useEffect} from 'react'
 import {useInView} from 'react-intersection-observer';
 
 // import "../styles/general.css";
-import "../styles/projects.css";
+import "../../styles/projects.css";
 
 import {FaGithub} from 'react-icons/fa';
 
 
-const ProjectBox = (props) => {
-    const proj = props.proj;
+const ProjectBox = ({proj}) => {
 
     const {ref: projRef, inView: projVisible, entry} = useInView({
         threshold: 0.4,

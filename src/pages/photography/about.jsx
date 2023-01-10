@@ -2,12 +2,12 @@ import React, {useState, useEffect} from 'react'
 import {useInView} from 'react-intersection-observer';
 
 
-import { useScrollLocation } from '../helper';
+import { useScrollLocation } from '../../utils/helper';
 
-import About_Icon from './about_icon';
+import About_Icon from '../../components/about_icon';
 
 // import "../styles/about.css";
-import "../styles/about.css";
+import "../../styles/about.css";
 
 const About = () => {
     
@@ -53,17 +53,15 @@ const About = () => {
             <div ref={aboutBody} className={`about_body fade_in_up ${aboutBodyVisible ? 'fade_in_appear' : ''}`}>
 
                 <div className='about_description font-WorkSans'>
-                    <p>
+                    <p className='pb-[20px]'>
                         I'm Ire, a sophomore studying Information Systems and Language Technologies at Carnegie Mellon University,
                         and I enjoy using technology to solve problems.
                     </p>
-                    <br></br>
-                    <p>
+                    <p className='pb-[20px]'>
                         Born and raised during the ongoing tech boom of Lagos, Nigeria, I was exposed to computers
                         from an early age and loved using them to make everything from Scratch Games to animations and videos.
                         I've maintained this passion and curiosity, and love learning everything and anything I can.
                     </p>
-                    <br></br>
                     <p>
                         You can usually find me practicing the piano/guitar, 
                         playing basketball, or coaxing my friends to do photoshoots 

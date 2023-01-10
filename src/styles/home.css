@@ -33,7 +33,6 @@
 }
 
 
-
 /* CARD STYLING */
 .intro_card{
     width: var(--card_width);
@@ -139,9 +138,11 @@
 /* CUSTOM MOBILE CSS  */
 /* //////////////////////////////////////////////////////////////// */
 @media only screen and (max-width: 768px){
+
     .intro_section{
         flex-direction: column;
         align-items: center;
+        margin-top: -6vh;
     }
     .intro_title{
         align-items: center;
@@ -305,20 +306,3 @@
     background-repeat: no-repeat;
     background-size: 190% 150%;
 }
-/* .cursor::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute; 
-    top: 0; 
-    left: 0;
-    display: block;
-    border-radius: 100%;
-    opacity: 0;
-} */
-/* .cursor.active{
-
-} */
-/* .cursor.active::before{
-    opacity: 1;
-} */

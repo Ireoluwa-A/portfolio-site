@@ -5,23 +5,23 @@ import LazyImg from './lazyimg'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
-import "../styles/photography.css";
+import "../../styles/photography.css";
 
 // import placeholder from '../assets/gallery/placeholder.jpg'
 // import GALLERY from '../assets/gallery/gallery.js';
-import Img1 from '../assets/gallery/1.jpg';
-import Img2 from '../assets/gallery/2.jpg';
-import Img3 from '../assets/gallery/3.jpg';
-import Img4 from '../assets/gallery/4.jpg';
-import Img5 from '../assets/gallery/5.jpg';
-import Img6 from '../assets/gallery/6.jpg';
-import Img7 from '../assets/gallery/7.jpg';
-import Img8 from '../assets/gallery/8.jpg';
-import Img9 from '../assets/gallery/9.jpg';
-import Img10 from '../assets/gallery/10.jpg';
-import Img11 from '../assets/gallery/11.jpg';
-import Img12 from '../assets/gallery/12.jpg';
-import Img13 from '../assets/gallery/13.jpg';
+import Img1 from '../../assets/gallery/1.jpg';
+import Img2 from '../../assets/gallery/2.jpg';
+import Img3 from '../../assets/gallery/3.jpg';
+import Img4 from '../../assets/gallery/4.jpg';
+import Img5 from '../../assets/gallery/5.jpg';
+import Img6 from '../../assets/gallery/6.jpg';
+import Img7 from '../../assets/gallery/7.jpg';
+import Img8 from '../../assets/gallery/8.jpg';
+import Img9 from '../../assets/gallery/9.jpg';
+import Img10 from '../../assets/gallery/10.jpg';
+import Img11 from '../../assets/gallery/11.jpg';
+import Img12 from '../../assets/gallery/12.jpg';
+import Img13 from '../../assets/gallery/13.jpg';
 
 const Photography = () => {
 
