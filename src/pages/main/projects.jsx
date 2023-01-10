@@ -11,10 +11,10 @@ import "../../styles/projects.css";
 
 
 const Projects = () => {
-    const location = useScrollLocation()
+    useScrollLocation()
 
     const {ref: projectHeader, inView: projectHeaderVisible, entry} = useInView({
-        threshold: 0.4,
+        threshold: 0.5,
         triggerOnce: true
     })
     

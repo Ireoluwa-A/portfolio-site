@@ -6,6 +6,7 @@
     /* height: 30vw; */
     margin-left: auto;
     margin-right: auto;
+    flex: 1 auto;
     /* padding-top: 35px; */
 }
 .about_header{
@@ -80,10 +81,14 @@
 }
 
 /* MOBILE RESPONSIVE */
+@media only screen and (max-width: 960px){
+    .about_container{
+        height: 450px;
+    }
+}
 @media only screen and (max-width: 768px){
     .about_container{
-        height: 700px;
-    
+        height: 500px;
     }
     .about_body{
         flex-direction: column;

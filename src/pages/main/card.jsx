@@ -1,8 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 
-
-
-import "../../styles/photography.css";
+import "../../styles/home.css";
 
 import { TypeAnimation } from 'react-type-animation';
 
@@ -10,44 +8,41 @@ const Card = (props) => {
 
     const browser = props.browser;
     const incompatibleBrowser = (browser == 'Safari');
- 
+
     const [cursorX, setCursorX] = useState();
     const [cursorY, setCursorY] = useState();
 
-    // Animated camera
-    const [camAnimated, setCamAnimated] = useState(false);
+    // Animate cursor
     const [cursorAnimated, setCursorAnimated] = useState(false);
 
     useEffect(()=> {
         window.addEventListener('mousemove',(e) => {
-            setCursorX(e.pageX)
-            setCursorY(e.pageY)
+            setCursorX(e.pageX);
+            setCursorY(e.pageY);
         })
         return window.removeEventListener('mousemove',(e) => {
-            setCursorX(e.pageX)
-            setCursorY(e.pageY)
+            setCursorX(e.pageX);
+            setCursorY(e.pageY);
         })
-    }, [])
-
+    },[])
 
     return ( 
         <>  
-            {/* CURSOR */}
             <div className={`cursor ${cursorAnimated ? 'cursor_active' : 'cursor_fade'}`}
             style={{
                 left: cursorX + 'px',
                 top: cursorY + 'px'
-            }}></div>
+            }}
+            ></div>
 
             <div className={`intro_card ${incompatibleBrowser ? '' : 'drop-shadow-lg'} animate-fade_in_right`}>
                 {/* <div className='tape1'></div> */}
-                <div 
-                    className='card_screen'
-                    onMouseEnter={() => setCursorAnimated(() => true)}
-                    onMouseLeave = {() => setCursorAnimated(() => false)}
-                    // onAnimationEnd={() => setCamAnimated(() => false)}
+
+                <div className='card_screen'
+                onMouseEnter={function(){setCursorAnimated(true)}}
+                onMouseLeave={function(){setCursorAnimated(false)}}
                 >  
-                    <a className={`cam_animated cam_animation`} href='/#/photography' target="_blank"></a>
+                    <a className={`cam_animation`} href='/#/photography' target="_blank"></a>
                 </div>
 
                 <div className='intro_card_content'>
@@ -76,7 +71,6 @@ const Card = (props) => {
                 </div>
                 {/* <div className='tape2'></div> */}
             </div> 
-
         </>
      );
      

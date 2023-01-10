@@ -7,14 +7,15 @@ import {detectBrowser} from '../../utils/helper';
 
 import Spinner from '../../components/spinner';
 import Card from './card';
-import About from '../photography/about';
-const Projects = React.lazy(() => import ('./projects'));
+// import About from './about';
+
+const Projects = React.lazy(() => import('./projects'));
+const About = React.lazy(() => import('./about'));
 
 const Home = () => {
-    const browser = detectBrowser()
+    const browser = detectBrowser() 
     
     return (
-
         <main id='home' name='home' className='w-full h-full'>
             <section className='intro_section'>
 
@@ -47,7 +48,10 @@ const Home = () => {
             {/* Divider */} 
             <div className='w-full h-[170px]'></div>
 
-            <About/>
+            <Suspense fallback={<Spinner/>}>
+                <About/>
+            </Suspense>
+
             
         </main>
 

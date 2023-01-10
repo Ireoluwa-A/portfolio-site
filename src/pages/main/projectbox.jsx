@@ -9,8 +9,8 @@ import {FaGithub} from 'react-icons/fa';
 
 const ProjectBox = ({proj}) => {
 
-    const {ref: projRef, inView: projVisible, entry} = useInView({
-        threshold: 0.4,
+    const {ref: projRef, inView: projVisible} = useInView({
+        threshold: 0.5,
         triggerOnce: true
     })
 

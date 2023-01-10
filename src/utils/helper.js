@@ -20,7 +20,6 @@ export function useScrollLocation(){
         }
     }, [location,])
 }
-
 export function useFuncDelay(func, val, time){
     useEffect(() => {
         setTimeout(() => {

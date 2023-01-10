@@ -10,6 +10,7 @@ import About_Icon from '../../components/about_icon';
 import "../../styles/about.css";
 
 const About = () => {
+    useScrollLocation();
     
     const {ref: aboutHeader, inView: aboutHeaderVisible, entry} = useInView({
         threshold: 0,
@@ -19,7 +20,7 @@ const About = () => {
         threshold: 0,
         triggerOnce: true
     })
-    const location = useScrollLocation()
+    
 
     
     const about_icons = [
@@ -90,8 +91,6 @@ const About = () => {
                         <div className='about_flag'>
                         </div>
                     </div> */}
-                
- 
             
         </section>
     )
