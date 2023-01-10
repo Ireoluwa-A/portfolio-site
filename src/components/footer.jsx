@@ -11,7 +11,7 @@ const Footer = () => {
     const [swatch2Animated, setSwatch2Animated] = useState(false)
     return (
 
-        <footer name='footer' className='footer_container'>
+        <footer id='footer' name='footer' className='footer_container'>
             <div className='flex flex-row mx-auto tracking-wider' > 
                 <FaRegCopyright className='mt-[2px] md:w-[15px] md:h-[15px]'></FaRegCopyright> 
                 <p className='pl-[5px]'>IRE ALARAPE 2022</p>

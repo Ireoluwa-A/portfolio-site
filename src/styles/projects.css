@@ -147,6 +147,7 @@
 @media only screen and (max-width: 810px){
     .projects_container{
         max-width: 75vw;
+        max-height: 160vh;
     }
     .projects_box{
         /* flex-direction: column; */
@@ -202,7 +203,7 @@
     .projects_blurb p{
         color: white;
         text-align: left;
-        font-size: 12px;
+        font-size: 14px;
     }
     .projects_link{
         justify-content: flex-start;
