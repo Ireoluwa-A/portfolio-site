@@ -1,5 +1,6 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, useCallback} from 'react';
 
+import {useInView} from 'react-intersection-observer';
 import "../../styles/home.css";
 
 import { TypeAnimation } from 'react-type-animation';
@@ -7,24 +8,32 @@ import { TypeAnimation } from 'react-type-animation';
 const Card = (props) => {
 
     const browser = props.browser;
-    const incompatibleBrowser = (browser == 'Safari');
+    const incompatibleBrowser = (browser === 'Safari');
 
     const [cursorX, setCursorX] = useState();
     const [cursorY, setCursorY] = useState();
 
+    const [card, cardVisible] = useInView();
+
     // Animate cursor
     const [cursorAnimated, setCursorAnimated] = useState(false);
 
-    useEffect(()=> {
-        window.addEventListener('mousemove',(e) => {
-            setCursorX(e.pageX);
-            setCursorY(e.pageY);
-        })
-        return window.removeEventListener('mousemove',(e) => {
-            setCursorX(e.pageX);
-            setCursorY(e.pageY);
-        })
-    },[])
+    const move = useCallback((e) => {
+        setCursorX(e.pageX);
+        setCursorY(e.pageY);
+    }, [setCursorX, setCursorY])
+
+    useEffect(() => { 
+        cardVisible ? window.addEventListener('mousemove', move, true) :
+                      window.removeEventListener('mousemove', move, true)
+        return () => window.removeEventListener('mousemove', move, true);
+    },[cardVisible]);
+
+
+    // useEffect(() => {
+    //     console.log(cursorX, cursorY)
+    //     console.log(cardVisible)
+    // },[cursorX, cursorY, cardVisible]);
 
     return ( 
         <>  
@@ -38,7 +47,7 @@ const Card = (props) => {
             <div className={`intro_card ${incompatibleBrowser ? '' : 'drop-shadow-lg'} animate-fade_in_right`}>
                 {/* <div className='tape1'></div> */}
 
-                <div className='card_screen'
+                <div ref={card} className='card_screen'
                 onMouseEnter={function(){setCursorAnimated(true)}}
                 onMouseLeave={function(){setCursorAnimated(false)}}
                 >  
@@ -66,8 +75,7 @@ const Card = (props) => {
                     <p className='font-sans max-w-[1/4] text-xs pl-[10px] 
                                 tracking-wider pb-[10px]'>
                         Carnegie Mellon student, passionate about tech, language, photography, and plantains.
-                    </p>  
-                    
+                    </p>                  
                 </div>
                 {/* <div className='tape2'></div> */}
             </div> 

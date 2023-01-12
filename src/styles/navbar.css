@@ -17,10 +17,11 @@
     transition: 0.3s;
     backdrop-filter: blur(10px);
 }
+
 .nav{
     display: flex;
     transition: 0.3s;
-    /* margin-right: -1vw; */
+    margin-right: -1vw;
 }
 .nav-container-hidden{
     transform: translateY(-80px);
@@ -38,7 +39,6 @@
     font-size: 20px;
     cursor: pointer;
 }
-
 .nav_link{
     position: relative;
 }

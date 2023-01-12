@@ -75,11 +75,13 @@ const Navbar = () => {
                 </li>
                 <li>
                     <NavLink className='font-WorkSans nav_link' to='/photography' activeClassName="active-link">
-                        PHOTOGRAPHY
+                            PHOTOGRAPHY
                     </NavLink> 
                 </li>
                 <li>
-                    <Link className='font-WorkSans nav_link' to='/#about'>ABOUT</Link>
+                    <Link className='font-WorkSans nav_link' to='/#about'>
+                        ABOUT
+                    </Link> 
                 </li>
                 <li>
                     <a href={resume} className='font-WorkSans nav_link' target="_blank">
@@ -88,11 +90,11 @@ const Navbar = () => {
                 </li>
             </ul>
 
+            {/* MOBILE NAV */}
             <div onClick={handleClick} 
                 className='md:hidden pr-[7%] flex z-20'>
                     {!nav ? <FaBars /> : <FaTimes />}
             </div>
-
             <ul className={!nav ? 'nav_mobile_hidden' : 'nav_mobile'} >
                 <li>
                     <a href="/">
