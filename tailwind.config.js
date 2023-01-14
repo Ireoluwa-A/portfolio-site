@@ -10,7 +10,7 @@ module.exports = {
     fontFamily:{
       'WorkSans': ['"Work Sans"', 'sans-serif'],
       'Lato': ['Lato', 'sans-serif'],
-      'Nunito': ['Nunito', 'sans-serif']
+      'Nunito': ['Nunito Sans', 'sans-serif']
     },
 
     extend: {

@@ -28,7 +28,7 @@
     --camAnimationLength: 8s;
 }
 
-.divider{
+.header_line{
     position: relative;
     width: 90%;
     height: 30px;
@@ -140,11 +140,11 @@
     url('../assets/camera_sequence/013.png')
 
     /* Projects pictures */
-    url('../assets/youkaryote.jpg')
-    url('../assets/youkaryote2.jpg')
-    url('../assets/c0vm.jpg')
-    url('../assets/EDE.jpg')
-    url('../assets/construction.png')
+    url('../assets/projectBackgrounds/youkaryote.jpg')
+    url('../assets/projectBackgrounds/youkaryote2.jpg')
+    url('../assets/projectBackgrounds/c0vm.jpg')
+    url('../assets/projectBackgrounds/EDE.jpg')
+    url('../assets/projectBackgrounds/construction.png')
 
 }
 .loading_box_photography:after{

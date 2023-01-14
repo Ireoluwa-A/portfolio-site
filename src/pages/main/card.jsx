@@ -13,7 +13,7 @@ const Card = (props) => {
     const [cursorX, setCursorX] = useState();
     const [cursorY, setCursorY] = useState();
 
-    const [card, cardVisible] = useInView();
+    const [card, cardVisible] = useInView() ;
 
     // Animate cursor
     const [cursorAnimated, setCursorAnimated] = useState(false);
@@ -28,7 +28,6 @@ const Card = (props) => {
                       window.removeEventListener('mousemove', move, true)
         return () => window.removeEventListener('mousemove', move, true);
     },[cardVisible]);
-
 
     // useEffect(() => {
     //     console.log(cursorX, cursorY)
@@ -80,8 +79,7 @@ const Card = (props) => {
                 {/* <div className='tape2'></div> */}
             </div> 
         </>
-     );
-     
+    );
 }
 export default Card;
  

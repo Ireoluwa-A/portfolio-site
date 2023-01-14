@@ -7,8 +7,10 @@ import Socials from './components/socials';
 import Footer from './components/footer';
 import Loader from './components/loader';
 
-import Home from './pages/main/home';
 import Photography from './pages/photography/photography';
+// import Home from './pages/main/home';
+const Home = React.lazy(() => import('./pages/main/home'));
+
 
 function App() {
 
@@ -32,7 +34,7 @@ function App() {
         }
       </>
   );
-}
+} 
 
 export default App;
 

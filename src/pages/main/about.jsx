@@ -49,10 +49,9 @@ const About = () => {
             {/* Title */}
             <div ref={aboutHeader} className={`about_header fade_in_left ${aboutHeaderVisible ? 'fade_in_appear' : ''}`} >
                 <h1 className='text-3xl tracking-wider font-bold font-WorkSans'>ABOUT</h1>
-                <div className='divider'></div>
+                <div className='header_line'></div>
             </div>
             <div ref={aboutBody} className={`about_body fade_in_up ${aboutBodyVisible ? 'fade_in_appear' : ''}`}>
-
                 <div className='about_description font-WorkSans'>
                     <p className='pb-[1.5rem]'>
                         I'm Ire, a sophomore studying Information Systems at Carnegie Mellon University,
@@ -70,7 +69,6 @@ const About = () => {
                         (with me behind the camera of course).
                     </p>
                 </div>
-                
             </div>
 
                 {/* <div className='about_options'> */}

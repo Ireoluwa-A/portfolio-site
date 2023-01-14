@@ -217,21 +217,21 @@
     background-color: grey;
 }
 .youkaryote_bg{
-    background-image: url('../assets/youkaryote.jpg');
+    background-image: url('../assets/projectBackgrounds/youkaryote.jpg');
 }
 .youkaryote_bg:hover{
-    background-image: url('../assets/youkaryote2.jpg');
+    background-image: url('../assets/projectBackgrounds/youkaryote2.jpg');
 }
 .c0_bg{
-    background-image: url('../assets/c0vm.jpg');
+    background-image: url('../assets/projectBackgrounds/c0vm.jpg');
 }
 .ede_bg{
-    background-image: url('../assets/EDE.jpg');
+    background-image: url('../assets/projectBackgrounds/EDE.jpg');
 }
 .sentimental_bg{
     background-color: grey;
 }
 .bcnf_bg{
     /* background-image: url('../assets/database.jpg'); */
-    background-image: url('../assets/construction.png');
+    background-image: url('../assets/projectBackgrounds/construction.png');
 }

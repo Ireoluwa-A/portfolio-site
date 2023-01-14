@@ -8,16 +8,16 @@
     align-items: middle;
     justify-content: center;
 }
+
 .gallery-wrapper{
     margin: auto;
-    /* margin-top: 10%; */
     align-items: center;
     vertical-align: middle;
     justify-content: center;
-    width: 70%;
+    width: 80%;
     height: 80%;
-
 }
+
 .gallery-border{
     position: absolute;
     width: 70%;

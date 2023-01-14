@@ -7,16 +7,15 @@ import "../../styles/photography.css";
 
 // Learned from: 
 // https://huzaima.io/blog/lazy-loading-react-components-intersection-observer
-const LazyImg = (props) => {
-  const imgInfo = props.imgInfo;
-
+const LazyImg = ({imgSrc, imgAlt}) => {
+  console.log(imgSrc)
   const [ placeholderRef, inView ] = useInView({
         triggerOnce: true,
         fallbackInView: true,
   });
 
   return (
-    <div ref={placeholderRef} > {inView ? <img onLoad={console.log("done")} src={imgInfo.imgSrc} loading='lazy' alt={imgInfo.alt || ""} /> : null}</div>
+    <div ref={placeholderRef} > {inView ? <img  src={imgSrc} loading='lazy' alt={imgAlt || ""} /> : null}</div>
     // <div ref={placeholderRef} > {inView ? <img  src={imgInfo.imgSrc} alt={imgInfo.alt || ""} /> : <img  src={placeholder}  alt={props.alt || ""} />}</div>
   )
   };

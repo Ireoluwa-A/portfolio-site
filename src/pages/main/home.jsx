@@ -6,6 +6,7 @@ import "../../styles/home.css";
 import {detectBrowser} from '../../utils/helper';
 
 import Spinner from '../../components/spinner';
+import Divider from '../../components/divider';
 import Card from './card';
 // import About from './about';
 
@@ -45,8 +46,7 @@ const Home = () => {
                 <Projects/>
             </Suspense>
             
-            {/* Divider */} 
-            <div className='w-full h-[170px]'></div>
+            <Divider/>
 
             <Suspense fallback={<Spinner/>}>
                 <About/>

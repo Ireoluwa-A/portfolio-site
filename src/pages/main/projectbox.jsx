@@ -6,7 +6,6 @@ import "../../styles/projects.css";
 
 import {FaGithub} from 'react-icons/fa';
 
-
 const ProjectBox = ({proj}) => {
 
     const {ref: projRef, inView: projVisible} = useInView({
@@ -19,7 +18,9 @@ const ProjectBox = ({proj}) => {
             className={`projects_box fade_in_up
             ${projVisible ? 'fade_in_appear' : ''}`}
         >
-            <div className={`${proj.imageLeft} projects_image proj_bg ${proj.background}`}></div>
+            {/* ImageLeft either hidden or image class  */}
+            <div className={`${proj.imageLeft} projects_image proj_bg ${proj.background}`}>
+            </div>
 
             <div className={`projects_description ${proj.descriptionPos}`}>
                 <h1 className='font-bold font-WorkSans'>{proj.title}</h1>
@@ -47,7 +48,6 @@ const ProjectBox = ({proj}) => {
             </div>
 
         </div>
-
     );
 }
 

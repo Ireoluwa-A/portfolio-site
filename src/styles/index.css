@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities; 
 
-
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@700&family=Roboto:ital@1&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap'); 
 
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Work+Sans&display=swap'); 
 
 @layer base{
 
@@ -15,7 +16,6 @@
         /* @apply bg-[#ece8e3]; */
         /* @apply bg-[#ece8e3]; */
         @apply bg-[#ececec];
-        scroll-behavior: smooth;
         /* @apply font-[Roboto]; */
         /* @apply font-["Work Sans"]; */
         /* @apply font-[Helvetica]; */
@@ -24,6 +24,7 @@
         @apply px-4;
         @apply cursor-pointer; 
     }
-    
-
 }
+/* @layer components{
+
+} */
