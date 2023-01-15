@@ -48,12 +48,12 @@
 /* PAGE ANIMATIONS */
 .fade_in_left{
     opacity: 0;
-    transition: 0.6s;
+    transition: 0.5s;
     transform: translateX(-50px);
 }
 .fade_in_up{
     opacity: 0;
-    transition: 0.6s;
+    transition: 0.5s;
     transform: translateY(40px);
 }
 .fade_in_appear{
