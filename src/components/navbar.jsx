@@ -5,7 +5,6 @@ import {waitForElementToDisplay, useFuncDelay, useLockScroll} from '../utils/hel
 
 import "../styles/navbar.css";
 
-import resume from "../assets/resume.pdf";
 import {FaBars, FaTimes} from 'react-icons/fa';
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 
@@ -84,7 +83,9 @@ const Navbar = () => {
                     </Link> 
                 </li>
                 <li>
-                    <a href={resume} className='font-WorkSans nav_link' target="_blank">
+                    {/* use public_url to give clean path name */}
+                    <a href={process.env.PUBLIC_URL + '/resume.pdf'} className='font-WorkSans nav_link' 
+                    rel="noopener noreferrer" target="_blank">
                         RESUME
                     </a>
                 </li>
@@ -117,8 +118,9 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li>
-                    <a href={resume} target="_blank">
-                        RESUME
+                    <a href={process.env.PUBLIC_URL + '/resume.pdf'} className='font-WorkSans nav_link' 
+                        rel="noopener noreferrer" target="_blank">
+                            RESUME
                     </a>
                 </li>
             </ul>

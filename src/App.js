@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, Suspend} from 'react';
 import {useFuncDelay, useLockScroll} from './utils/helper'
 import {Routes, Route} from 'react-router-dom';
 
@@ -8,15 +8,24 @@ import Footer from './components/footer';
 import Loader from './components/loader';
 
 import Photography from './pages/photography/photography';
-// import Home from './pages/main/home';
-const Home = React.lazy(() => import('./pages/main/home'));
+import Home from './pages/main/home';
+import ProjectPages from './data/projpages';
+// const Home = React.lazy(() => import('./pages/main/home'));
 
+
+const ProjectPage = React.lazy(() => import('./pages/main/projectpage'))
+
+
+
+
+// const ProjectPages = React.lazy(() => import('./data/projpages'))
 
 function App() {
 
   const [loading, setLoading] = useState(true);
   useFuncDelay(setLoading, false, 3000)
   useLockScroll(loading)
+
 
   return (
       <>{loading ? <Loader/> : 
@@ -26,6 +35,14 @@ function App() {
           
             <Routes>  
               <Route exact path="/" element={<Home/>}/>
+              {ProjectPages.map((proj,index)=>{
+                return(
+                    <Route path="/youkaryote" key={index} 
+                           element={<ProjectPage props={proj}/>}
+                    />
+                )})
+              }
+              
               <Route path='/photography' element={<Photography/>}/>
             </Routes>
 
