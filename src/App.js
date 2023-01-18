@@ -10,9 +10,8 @@ import Loader from './components/loader';
 import Photography from './pages/photography/photography';
 import Home from './pages/main/home';
 import ProjectPages from './data/projpages';
+
 // const Home = React.lazy(() => import('./pages/main/home'));
-
-
 const ProjectPage = React.lazy(() => import('./pages/main/projectpage'))
 
 
@@ -35,6 +34,7 @@ function App() {
           
             <Routes>  
               <Route exact path="/" element={<Home/>}/>
+              
               {ProjectPages.map((proj,index)=>{
                 return(
                     <Route path="/youkaryote" key={index} 

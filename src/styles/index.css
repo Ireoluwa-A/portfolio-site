@@ -3,11 +3,8 @@
 @tailwind utilities; 
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:ital@1&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap'); 
-
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Work+Sans&display=swap'); 
 
 @layer base{
