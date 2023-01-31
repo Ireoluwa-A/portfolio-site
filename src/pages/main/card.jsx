@@ -52,7 +52,7 @@ const Card = (props) => {
                 onMouseEnter={function(){setCursorAnimated(true)}}
                 onMouseLeave={function(){setCursorAnimated(false)}}
                 >  
-                    <NavLink className={`cam_animation`} to='/photography' target="_blank"></NavLink>
+                    <NavLink className={`cam_animation`} to='/photography'></NavLink>
                 </div>
 
                 <div className='intro_card_content'>
