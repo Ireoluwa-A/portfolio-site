@@ -1,5 +1,7 @@
 import React, {useState, useEffect, useRef, useCallback} from 'react';
 
+import {NavLink, Link} from "react-router-dom";
+
 import {useInView} from 'react-intersection-observer';
 import "../../styles/home.css";
 
@@ -50,7 +52,7 @@ const Card = (props) => {
                 onMouseEnter={function(){setCursorAnimated(true)}}
                 onMouseLeave={function(){setCursorAnimated(false)}}
                 >  
-                    <a className={`cam_animation`} href='/photography' target="_blank"></a>
+                    <NavLink className={`cam_animation`} to='/photography' target="_blank"></NavLink>
                 </div>
 
                 <div className='intro_card_content'>
