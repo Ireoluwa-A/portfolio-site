@@ -6,7 +6,6 @@ function ProjectPage ({proj}) {
     
     return (  
         <div></div>
-    
     );
 }
 

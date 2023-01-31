@@ -27,7 +27,8 @@ function App() {
 
 
   return (
-      <>{loading ? <Loader/> : 
+      <>
+        {loading ? <Loader/> : 
           <>
             <Navbar/>
             <Socials/>

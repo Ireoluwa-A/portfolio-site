@@ -6,7 +6,6 @@ import {waitForElementToDisplay, useFuncDelay, useLockScroll} from '../utils/hel
 import "../styles/navbar.css";
 
 import {FaBars, FaTimes} from 'react-icons/fa';
-import {BsFillPersonLinesFill} from 'react-icons/bs'
 
 
 const Navbar = () => {
