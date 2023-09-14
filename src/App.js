@@ -15,8 +15,6 @@ import ProjectPages from './data/projpages';
 const ProjectPage = React.lazy(() => import('./pages/main/projectpage'))
 
 
-
-
 // const ProjectPages = React.lazy(() => import('./data/projpages'))
 
 function App() {
@@ -24,7 +22,6 @@ function App() {
   const [loading, setLoading] = useState(true);
   useFuncDelay(setLoading, false, 3000)
   useLockScroll(loading)
-
 
   return (
       <>

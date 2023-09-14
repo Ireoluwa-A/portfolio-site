@@ -54,8 +54,8 @@ const About = () => {
             <div ref={aboutBody} className={`about_body fade_in_up ${aboutBodyVisible ? 'fade_in_appear' : ''}`}>
                 <div className='about_description font-WorkSans'>
                     <p className='pb-[1.5rem]'>
-                        I'm Ire, a sophomore studying Information Systems at Carnegie Mellon University,
-                        and I enjoy using technology to solve problems.
+                        I'm Ire, a Junior majoring in Information Systems, minoring in C.S and Language Technologies,
+                        and I enjoy using technology to solve problems. 
                     </p>
                     <p className='pb-[1.5rem]'>
                         Born and raised in Lagos, Nigeria, surrounded by the growing tech industry, I was exposed
