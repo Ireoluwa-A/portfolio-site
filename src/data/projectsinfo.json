@@ -23,7 +23,7 @@
     },
     {
         "background": "bcnf_bg",
-        "descriptionPos": "projects_description_l",
+        "descriptionPos": "projects_description_r",
         "imageLeft": "",
         "imageRight": "hidden",
         "title": "BCNF VISUALIZER",

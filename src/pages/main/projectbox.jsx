@@ -23,7 +23,9 @@ const ProjectBox = ({proj}) => {
             </div>
 
             <div className={`projects_description ${proj.descriptionPos}`}>
-                <h1 className='font-bold font-WorkSans'>{proj.title}</h1>
+ 
+                <h1 className='projects_title font-bold font-WorkSans'>{proj.title}</h1>
+ 
                 <div className='projects_blurb'>
                     <p className='font-Nunito'>
                         {proj.description}
